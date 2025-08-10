@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: 'Antes de comenzar...',
       input: 'text',
       inputLabel: 'Escribe tu pregunta o el área de interés (amor, trabajo, dinero, salud, etc.)',
-      inputPlaceholder: 'Ejemplo: ¿Cómo me irá en el amor este año?',
+      inputPlaceholder: 'Ej: ¿Cómo me irá en el amor este año?',
       confirmButtonText: 'Continuar',
       confirmButtonColor: 'var(--color4)',
       width: '600px',
