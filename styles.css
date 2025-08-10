@@ -10,6 +10,7 @@
   --color6: #4E1F00;
 --font-Titulos: "Protest Revolution", sans-serif;
 --font-Parrafos: "Shalimar", cursive;
+--font-Parrafos2: "Arial", cursive;
 }
 
 .protest-revolution-regular {
@@ -39,7 +40,7 @@ body {
   z-index: -1;
 }
 .tarot-popup {
-  font-family: var(--font-Parrafos);
+  font-family: var(--font-Parrafos2);
 }
 .tarot-title {
     font-family: var(--font-Titulos);
@@ -317,7 +318,7 @@ footer p {
   }
   
   header p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     padding: 0 10px;
   }
   
@@ -340,12 +341,16 @@ footer p {
     font-size: 1.2rem !important;
   }
   
+  footer{
+    margin-bottom: 10px;
+  }
+
   footer p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   footer img {
-    width: 80px;
+    width: 100px;
   }
 }
 
