@@ -128,11 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
         preguntaUsuario = "";
       } else {
         // Ir al inicio
-        window.location.href = '/';
+        window.location.href = 'https://hyoga1023.github.io/El_Tarot/';
       }
     } else {
       // Si eligió cancelar o ir al inicio
-      window.location.href = '/';
+      window.location.href = 'https://hyoga1023.github.io/El_Tarot/';
     }
   };
 
