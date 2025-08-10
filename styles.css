@@ -38,6 +38,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  background-color: #000;
 }
 .tarot-popup {
   font-family: var(--font-Parrafos2);
