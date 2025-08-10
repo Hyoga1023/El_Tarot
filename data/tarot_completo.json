@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "carta": "El Loco",
+    "imagen": "major_arcana_fool",
+    "significado_derecho": "Libertad, aventura, espontaneidad. Confiar en el viaje y abrazar lo desconocido.",
+    "significado_invertido": "Imprudencia, caos, falta de dirección. Tomar riesgos innecesarios.",
+    "descripcion": "Simboliza nuevos comienzos y el potencial puro. Invita a vivir sin ataduras."
+  },
+  {
+    "id": 2,
+    "carta": "El Mago",
+    "imagen": "major_arcana_magician",
+    "significado_derecho": "Habilidad, creatividad, poder de manifestación. Usar recursos disponibles con maestría.",
+    "significado_invertido": "Manipulación, egoísmo, talento desperdiciado. Engaño o ilusiones baratas.",
+    "descripcion": "Representa el poder de transformar ideas en realidad. Dominio de los elementos."
+  },
+  {
+    "id": 3,
+    "carta": "La Sacerdotisa",
+    "imagen": "major_arcana_priestess",
+    "significado_derecho": "Intuición, misterio, sabiduría interior. Conectar con lo subconsciente.",
+    "significado_invertido": "Secretos ocultos, ignorancia. Negar la voz interior o la espiritualidad.",
+    "descripcion": "Guardián de lo oculto. Invita a confiar en la intuición y explorar lo intangible."
+  },
+  {
+    "id": 4,
+    "carta": "La Emperatriz",
+    "imagen": "major_arcana_empress",
+    "significado_derecho": "Fertilidad, creatividad, abundancia. Nutrir proyectos o relaciones.",
+    "significado_invertido": "Dependencia, inacción. Negar la sensualidad o la autoexpresión.",
+    "descripcion": "Símbolo de amor maternal y creación. Representa la conexión con la naturaleza."
+  },
+  {
+    "id": 5,
+    "carta": "El Emperador",
+    "imagen": "major_arcana_emperor",
+    "significado_derecho": "Autoridad, estructura, protección. Liderar con sabiduría y orden.",
+    "significado_invertido": "Tiranía, rigidez. Abuso de poder o control excesivo.",
+    "descripcion": "Figura paterna que establece límites. Equilibrio entre fuerza y justicia."
+  },
+  {
+    "id": 6,
+    "carta": "El Sumo Sacerdote",
+    "imagen": "major_arcana_hierophant",
+    "significado_derecho": "Tradición, espiritualidad, guía moral. Buscar sabiduría en instituciones o mentores.",
+    "significado_invertido": "Dogmatismo, manipulación espiritual. Rechazo a lo establecido.",
+    "descripcion": "Puente entre lo divino y humano. Representa sistemas de creencias."
+  },
+  {
+    "id": 7,
+    "carta": "Los Enamorados",
+    "imagen": "major_arcana_lovers",
+    "significado_derecho": "Amor, unión, elecciones del corazón. Armonía en relaciones.",
+    "significado_invertido": "Desequilibrio, indecisión. Conflictos amorosos o elecciones impulsivas.",
+    "descripcion": "Simboliza conexiones profundas y decisiones basadas en valores."
+  },
+  {
+    "id": 8,
+    "carta": "El Carro",
+    "imagen": "major_arcana_chariot",
+    "significado_derecho": "Victoria, determinación, avance. Controlar fuerzas opuestas.",
+    "significado_invertido": "Falta de dirección, derrota. Conflictos internos no resueltos.",
+    "descripcion": "Triunfo mediante voluntad y enfoque. Representa progreso y liderazgo."
+  },
+  {
+    "id": 9,
+    "carta": "La Fuerza",
+    "imagen": "major_arcana_strength",
+    "significado_derecho": "Fortaleza interior, compasión, autocontrol. Dominar instintos con suavidad.",
+    "significado_invertido": "Debilidad, falta de voluntad. Dejarse dominar por emociones.",
+    "descripcion": "Poder de la gentileza sobre la fuerza bruta. Coraje emocional."
+  },
+  {
+    "id": 10,
+    "carta": "El Ermitaño",
+    "imagen": "major_arcana_hermit",
+    "significado_derecho": "Introspección, sabiduría, soledad buscada. Guía interior.",
+    "significado_invertido": "Aislamiento, rechazo a consejos. Miedo a la conexión.",
+    "descripcion": "Maestro solitario que busca verdades profundas. Luz en la oscuridad."
+  },
+  {
+    "id": 11,
+    "carta": "La Rueda de la Fortuna",
+    "imagen": "major_arcana_fortune",
+    "significado_derecho": "Cambio, ciclos, suerte. Adaptarse a giros del destino.",
+    "significado_invertido": "Mala suerte, resistencia. Negarse a aceptar cambios.",
+    "descripcion": "Simboliza los altibajos de la vida. Todo es temporal y está en movimiento."
+  },
+  {
+    "id": 12,
+    "carta": "La Justicia",
+    "imagen": "major_arcana_justice",
+    "significado_derecho": "Equilibrio, verdad, causa-efecto. Decisiones justas y karmas.",
+    "significado_invertido": "Injusticia, parcialidad. Negar responsabilidades.",
+    "descripcion": "Representa imparcialidad y ética. Cada acción tiene consecuencias."
+  },
+  {
+    "id": 13,
+    "carta": "El Colgado",
+    "imagen": "major_arcana_hanged",
+    "significado_derecho": "Sacrificio, nueva perspectiva. Pausa para reflexionar.",
+    "significado_invertido": "Estancamiento, resistencia. Victimización inútil.",
+    "descripcion": "Invitación a ver las cosas al revés. A veces, soltar es avanzar."
+  },
+  {
+    "id": 14,
+    "carta": "La Muerte",
+    "imagen": "major_arcana_death",
+    "significado_derecho": "Transformación, fin de ciclos. Renacer desde lo esencial.",
+    "significado_invertido": "Miedo al cambio, estancamiento. Aferrarse a lo conocido.",
+    "descripcion": "No es muerte física, sino evolución. Dejar ir para recibir."
+  },
+  {
+    "id": 15,
+    "carta": "La Templanza",
+    "imagen": "major_arcana_temperance",
+    "significado_derecho": "Equilibrio, moderación, paciencia. Unir opuestos con armonía.",
+    "significado_invertido": "Desequilibrio, excesos. Falta de autocontrol.",
+    "descripcion": "Símbolo de alquimia interior. Mezclar sabiamente energías."
+  },
+  {
+    "id": 16,
+    "carta": "El Diablo",
+    "imagen": "major_arcana_devil",
+    "significado_derecho": "Tentación, sombras, deseos. Reconocer impulsos oscuros.",
+    "significado_invertido": "Adicción, esclavitud. Ser víctima de vicios o miedos.",
+    "descripcion": "Refleja ataduras autoimpuestas. La sombra que busca integración."
+  },
+  {
+    "id": 17,
+    "carta": "La Torre",
+    "imagen": "major_arcana_tower",
+    "significado_derecho": "Cambio abrupto, revelación. Destrucción de ilusiones.",
+    "significado_invertido": "Miedo al cambio, resistir lo inevitable. Crisis menor.",
+    "descripcion": "Derrumbe de estructuras falsas. Verdad que libera, aunque duela."
+  },
+  {
+    "id": 18,
+    "carta": "La Estrella",
+    "imagen": "major_arcana_star",
+    "significado_derecho": "Esperanza, inspiración, fe. Sanación y guía espiritual.",
+    "significado_invertido": "Desesperanza, pesimismo. Negar señales del universo.",
+    "descripcion": "Luz en la oscuridad. Confiar en el flujo divino."
+  },
+  {
+    "id": 19,
+    "carta": "La Luna",
+    "imagen": "major_arcana_moon",
+    "significado_derecho": "Intuición, sueños, subconsciente. Explorar lo misterioso.",
+    "significado_invertido": "Confusión, engaño. Miedos irracionales o ilusiones.",
+    "descripcion": "Símbolo de lo oculto y lo emocional. Ver más allá de las apariencias."
+  },
+  {
+    "id": 20,
+    "carta": "El Sol",
+    "imagen": "major_arcana_sun",
+    "significado_derecho": "Alegría, éxito, vitalidad. Claridad y verdad.",
+    "significado_invertido": "Éxito retrasado, temporal nubosidad. Falta de entusiasmo.",
+    "descripcion": "Energía luminosa que disipa sombras. Felicidad y logros."
+  },
+  {
+    "id": 21,
+    "carta": "El Juicio",
+    "imagen": "major_arcana_judgement",
+    "significado_derecho": "Renacimiento, llamado interior. Absolución y nuevo propósito.",
+    "significado_invertido": "Arrepentimiento, duda. Negar oportunidades de cambio.",
+    "descripcion": "Despertar espiritual. Responder a un llamado superior."
+  },
+  {
+    "id": 22,
+    "carta": "El Mundo",
+    "imagen": "major_arcana_world",
+    "significado_derecho": "Completitud, logro, unidad. Integración de experiencias.",
+    "significado_invertido": "Incompletitud, estancamiento. Falta de cierre.",
+    "descripcion": "Fin de un ciclo y comienzo de otro. Todo está conectado."
+  },
+  {
+    "id": 23,
+    "carta": "As de Bastos",
+    "imagen": "minor_arcana_wands_ace",
+    "significado_derecho": "Inspiración, energía, nuevos comienzos. Creatividad en acción.",
+    "significado_invertido": "Falta de motivación, oportunidades perdidas. Demoras.",
+    "descripcion": "Chispa de entusiasmo. Inicio de proyectos o pasiones."
+  },
+  {
+    "id": 24,
+    "carta": "2 de Bastos",
+    "imagen": "minor_arcana_wands_2",
+    "significado_derecho": "Planificación, decisiones, futuro. Evaluar opciones.",
+    "significado_invertido": "Indecisión, miedo al cambio. Falta de dirección.",
+    "descripcion": "Momento de elegir caminos. Equilibrio entre lo conocido y lo nuevo."
+  },
+  {
+    "id": 25,
+    "carta": "3 de Bastos",
+    "imagen": "minor_arcana_wands_3",
+    "significado_derecho": "Expansión, progreso, colaboración. Primeros frutos del esfuerzo.",
+    "significado_invertido": "Retrasos, falta de apoyo. Obstáculos inesperados.",
+    "descripcion": "Trabajo en equipo que rinde frutos. Visión a largo plazo."
+  },
+  {
+    "id": 26,
+    "carta": "4 de Bastos",
+    "imagen": "minor_arcana_wands_4",
+    "significado_derecho": "Celebración, armonía, comunidad. Alegría compartida.",
+    "significado_invertido": "Conflictos, falta de unión. Festejos vacíos.",
+    "descripcion": "Momento de gozo y gratitud. Estabilidad emocional."
+  },
+  {
+    "id": 27,
+    "carta": "5 de Bastos",
+    "imagen": "minor_arcana_wands_5",
+    "significado_derecho": "Competencia, desafío, conflicto sano. Defender posiciones.",
+    "significado_invertido": "Agresión, peleas inútiles. Perder por orgullo.",
+    "descripcion": "Fricción que genera crecimiento. Aprender a debatir con respeto."
+  },
+  {
+    "id": 28,
+    "carta": "6 de Bastos",
+    "imagen": "minor_arcana_wands_6",
+    "significado_derecho": "Victoria, reconocimiento, éxito. Triunfo merecido.",
+    "significado_invertido": "Ego excesivo, envidia. Falta de reconocimiento.",
+    "descripcion": "Momento en el centro de atención. Logros visibles."
+  },
+  {
+    "id": 29,
+    "carta": "7 de Bastos",
+    "imagen": "minor_arcana_wands_7",
+    "significado_derecho": "Valentía, defensa, perseverancia. Proteger lo importante.",
+    "significado_invertido": "Agotamiento, rendición. Sentirse abrumado.",
+    "descripcion": "Defender territorios o valores. Resistir bajo presión."
+  },
+  {
+    "id": 30,
+    "carta": "8 de Bastos",
+    "imagen": "minor_arcana_wands_8",
+    "significado_derecho": "Movimiento rápido, noticias, acción. Cambios acelerados.",
+    "significado_invertido": "Retrasos, malas noticias. Resistir el cambio.",
+    "descripcion": "Energía dinámica que impulsa. Adaptarse a lo inesperado."
+  },
+  {
+    "id": 31,
+    "carta": "9 de Bastos",
+    "imagen": "minor_arcana_wands_9",
+    "significado_derecho": "Resistencia, perseverancia, fuerza. Aguantar dificultades.",
+    "significado_invertido": "Agotamiento, rendición. Falta de recursos.",
+    "descripcion": "Último esfuerzo antes del éxito. Defender posiciones."
+  },
+  {
+    "id": 32,
+    "carta": "10 de Bastos",
+    "imagen": "minor_arcana_wands_10",
+    "significado_derecho": "Carga, responsabilidad, esfuerzo. Llevar peso ajeno.",
+    "significado_invertido": "Liberación, delegar. Soltar cargas innecesarias.",
+    "descripcion": "Exceso de obligaciones. Aprender a pedir ayuda."
+  },
+  {
+    "id": 33,
+    "carta": "Paje de Bastos",
+    "imagen": "minor_arcana_wands_page",
+    "significado_derecho": "Entusiasmo, noticias, curiosidad. Aprendizaje activo.",
+    "significado_invertido": "Inmadurez, noticias negativas. Falta de enfoque.",
+    "descripcion": "Mensajero de ideas nuevas. Energía juvenil y exploración."
+  },
+  {
+    "id": 34,
+    "carta": "Caballero de Bastos",
+    "imagen": "minor_arcana_wands_knight",
+    "significado_derecho": "Pasión, acción, aventura. Moverse hacia metas.",
+    "significado_invertido": "Impulsividad, agresión. Falta de dirección.",
+    "descripcion": "Espíritu emprendedor. Tomar riesgos calculados."
+  },
+  {
+    "id": 35,
+    "carta": "Reina de Bastos",
+    "imagen": "minor_arcana_wands_queen",
+    "significado_derecho": "Confianza, independencia, carisma. Liderar con calidez.",
+    "significado_invertido": "Egoísmo, inseguridad. Manipulación emocional.",
+    "descripcion": "Mujer poderosa y apasionada. Inspirar a otros."
+  },
+  {
+    "id": 36,
+    "carta": "Rey de Bastos",
+    "imagen": "minor_arcana_wands_king",
+    "significado_derecho": "Liderazgo, visión, creatividad. Dirigir con innovación.",
+    "significado_invertido": "Tiranía, terquedad. Abusar del poder.",
+    "descripcion": "Autoridad dinámica. Transformar ideas en realidad."
+  },
+  {
+    "id": 37,
+    "carta": "As de Copas",
+    "imagen": "minor_arcana_cups_ace",
+    "significado_derecho": "Amor nuevo, emociones positivas. Conexión espiritual.",
+    "significado_invertido": "Desilusión, bloqueo emocional. Negar sentimientos.",
+    "descripcion": "Apertura del corazón. Oportunidades afectivas o creativas."
+  },
+  {
+    "id": 38,
+    "carta": "2 de Copas",
+    "imagen": "minor_arcana_cups_2",
+    "significado_derecho": "Unión, reciprocidad, amor. Conexión profunda.",
+    "significado_invertido": "Desequilibrio, desamor. Relaciones tóxicas.",
+    "descripcion": "Símbolo de alianzas. Amor, amistad o colaboración."
+  },
+  {
+    "id": 39,
+    "carta": "3 de Copas",
+    "imagen": "minor_arcana_cups_3",
+    "significado_derecho": "Celebración, amistad, alegría. Compartir bendiciones.",
+    "significado_invertido": "Excesos, conflictos. Alegría superficial.",
+    "descripcion": "Felicidad en comunidad. Momentos de gratitud."
+  },
+  {
+    "id": 40,
+    "carta": "4 de Copas",
+    "imagen": "minor_arcana_cups_4",
+    "significado_derecho": "Reflexión, introspección. Oportunidades rechazadas.",
+    "significado_invertido": "Apatía, estancamiento. Negarse a crecer.",
+    "descripcion": "Momento de pausa emocional. Evaluar lo que se tiene."
+  },
+  {
+    "id": 41,
+    "carta": "5 de Copas",
+    "imagen": "minor_arcana_cups_5",
+    "significado_derecho": "Pérdida, duelo, aprendizaje. Enfocarse en lo que queda.",
+    "significado_invertido": "Superación, esperanza. Dejar atrás el dolor.",
+    "descripcion": "Dolor temporal. Lecciones tras la tristeza."
+  },
+  {
+    "id": 42,
+    "carta": "6 de Copas",
+    "imagen": "minor_arcana_cups_6",
+    "significado_derecho": "Nostalgia, inocencia, gratitud. Sanar el niño interior.",
+    "significado_invertido": "Apego al pasado. Negarse a madurar.",
+    "descripcion": "Recuerdos que nutren. Conexión con raíces."
+  },
+  {
+    "id": 43,
+    "carta": "7 de Copas",
+    "imagen": "minor_arcana_cups_7",
+    "significado_derecho": "Opciones, imaginación. Explorar posibilidades.",
+    "significado_invertido": "Ilusiones, engaño. Decisiones basadas en fantasías.",
+    "descripcion": "Muchas alternativas. Distinguir lo real de lo ilusorio."
+  },
+  {
+    "id": 44,
+    "carta": "8 de Copas",
+    "imagen": "minor_arcana_cups_8",
+    "significado_derecho": "Abandono, búsqueda interior. Dejar atrás lo conocido.",
+    "significado_invertido": "Miedo al cambio. Estancamiento emocional.",
+    "descripcion": "Partida necesaria. Seguir un llamado más profundo."
+  },
+  {
+    "id": 45,
+    "carta": "9 de Copas",
+    "imagen": "minor_arcana_cups_9",
+    "significado_derecho": "Satisfacción, placer, gratificación. Deseos cumplidos.",
+    "significado_invertido": "Materialismo, vacío. Falta de realización.",
+    "descripcion": "Contento emocional. Disfrutar de logros."
+  },
+  {
+    "id": 46,
+    "carta": "10 de Copas",
+    "imagen": "minor_arcana_cups_10",
+    "significado_derecho": "Felicidad familiar, plenitud. Amor en todas sus formas.",
+    "significado_invertido": "Conflictos domésticos. Falta de armonía.",
+    "descripcion": "Éxito emocional completo. Conexión con seres queridos."
+  },
+  {
+    "id": 47,
+    "carta": "Paje de Copas",
+    "imagen": "minor_arcana_cups_page",
+    "significado_derecho": "Sensibilidad, creatividad, romanticismo. Mensajes del corazón.",
+    "significado_invertido": "Inmadurez emocional. Engaños o ilusiones.",
+    "descripcion": "Mensajero de amor o inspiración. Sueños por cumplir."
+  },
+  {
+    "id": 48,
+    "carta": "Caballero de Copas",
+    "imagen": "minor_arcana_cups_knight",
+    "significado_derecho": "Idealismo, emociones, galantería. Seguir el corazón.",
+    "significado_invertido": "Inconstancia, manipulación. Amor no correspondido.",
+    "descripcion": "Romántico empedernido. Entrega apasionada."
+  },
+  {
+    "id": 49,
+    "carta": "Reina de Copas",
+    "imagen": "minor_arcana_cups_queen",
+    "significado_derecho": "Empatía, intuición, cuidado. Nutrir emocionalmente.",
+    "significado_invertido": "Dependencia, melancolía. Negar necesidades propias.",
+    "descripcion": "Amor incondicional. Sanación a través de la compasión."
+  },
+  {
+    "id": 50,
+    "carta": "Rey de Copas",
+    "imagen": "minor_arcana_cups_king",
+    "significado_derecho": "Sabiduría emocional, equilibrio. Liderar con corazón.",
+    "significado_invertido": "Frialdad, egoísmo. Abuso de poder emocional.",
+    "descripcion": "Autoridad afectiva. Tomar decisiones con sensibilidad."
+  },
+  {
+    "id": 51,
+    "carta": "As de Espadas",
+    "imagen": "minor_arcana_swords_ace",
+    "significado_derecho": "Claridad mental, verdad. Nuevas ideas o justicia.",
+    "significado_invertido": "Confusión, mentiras. Decisiones apresuradas.",
+    "descripcion": "Corte con la verdad. Pensamiento lógico y agudo."
+  },
+  {
+    "id": 52,
+    "carta": "2 de Espadas",
+    "imagen": "minor_arcana_swords_2",
+    "significado_derecho": "Decisión difícil, neutralidad. Equilibrio temporal.",
+    "significado_invertido": "Indecisión, evasión. Negarse a elegir.",
+    "descripcion": "Momento de pausa mental. Evaluar opciones."
+  },
+  {
+    "id": 53,
+    "carta": "3 de Espadas",
+    "imagen": "minor_arcana_swords_3",
+    "significado_derecho": "Dolor emocional, pérdida. Aceptar el sufrimiento.",
+    "significado_invertido": "Sanación, liberación. Superar el dolor.",
+    "descripcion": "Corazón roto que enseña. Lecciones duras."
+  },
+  {
+    "id": 54,
+    "carta": "4 de Espadas",
+    "imagen": "minor_arcana_swords_4",
+    "significado_derecho": "Descanso, recuperación. Pausa necesaria.",
+    "significado_invertido": "Agotamiento, aislamiento. Evadir problemas.",
+    "descripcion": "Retiro para sanar. Recargar energías."
+  },
+  {
+    "id": 55,
+    "carta": "5 de Espadas",
+    "imagen": "minor_arcana_swords_5",
+    "significado_derecho": "Conflicto, egoísmo. Ganar a costa de otros.",
+    "significado_invertido": "Reconciliación, humildad. Aprender de la derrota.",
+    "descripcion": "Victoria vacía. Elegir batallas con sabiduría."
+  },
+  {
+    "id": 56,
+    "carta": "6 de Espadas",
+    "imagen": "minor_arcana_swords_6",
+    "significado_derecho": "Transición, progreso. Dejar atrás lo negativo.",
+    "significado_invertido": "Estancamiento, resistencia. Miedo a avanzar.",
+    "descripcion": "Viaje hacia aguas tranquilas. Cambio gradual."
+  },
+  {
+    "id": 57,
+    "carta": "7 de Espadas",
+    "imagen": "minor_arcana_swords_7",
+    "significado_derecho": "Estrategia, sigilo. Actuar con discreción.",
+    "significado_invertido": "Engaño, traición. Planes fallidos.",
+    "descripcion": "Juego mental. Usar astucia con ética."
+  },
+  {
+    "id": 58,
+    "carta": "8 de Espadas",
+    "imagen": "minor_arcana_swords_8",
+    "significado_derecho": "Restricción, limitación autoimpuesta. Buscar salidas.",
+    "significado_invertido": "Liberación, nuevas perspectivas. Romper ataduras.",
+    "descripcion": "Sentirse atrapado por pensamientos. Opciones ocultas."
+  },
+  {
+    "id": 59,
+    "carta": "9 de Espadas",
+    "imagen": "minor_arcana_swords_9",
+    "significado_derecho": "Ansiedad, culpa, miedo. Pesadillas mentales.",
+    "significado_invertido": "Alivio, esperanza. Superar angustias.",
+    "descripcion": "Preocupación excesiva. Enfrentar los miedos."
+  },
+  {
+    "id": 60,
+    "carta": "10 de Espadas",
+    "imagen": "minor_arcana_swords_10",
+    "significado_derecho": "Final doloroso, traición. Tocar fondo.",
+    "significado_invertido": "Renacimiento, liberación. Dejar atrás el sufrimiento.",
+    "descripcion": "Ciclo que termina con dolor. Nuevos comienzos."
+  },
+  {
+    "id": 61,
+    "carta": "Paje de Espadas",
+    "imagen": "minor_arcana_swords_page",
+    "significado_derecho": "Curiosidad intelectual, nuevas ideas. Mensajes importantes.",
+    "significado_invertido": "Chismes, malas noticias. Falta de ética.",
+    "descripcion": "Mente inquisitiva. Aprendizaje rápido."
+  },
+  {
+    "id": 62,
+    "carta": "Caballero de Espadas",
+    "imagen": "minor_arcana_swords_knight",
+    "significado_derecho": "Acción rápida, determinación. Defender ideas.",
+    "significado_invertido": "Impulsividad, agresión. Falta de tacto.",
+    "descripcion": "Espíritu combativo. Resolver conflictos con lógica."
+  },
+  {
+    "id": 63,
+    "carta": "Reina de Espadas",
+    "imagen": "minor_arcana_swords_queen",
+    "significado_derecho": "Inteligencia, independencia. Claridad emocional.",
+    "significado_invertido": "Crueldad, frialdad. Manipulación mental.",
+    "descripcion": "Mujer sabia y directa. Verdad sin adornos."
+  },
+  {
+    "id": 64,
+    "carta": "Rey de Espadas",
+    "imagen": "minor_arcana_swords_king",
+    "significado_derecho": "Autoridad intelectual, justicia. Decidir con lógica.",
+    "significado_invertido": "Tiranía, abuso de poder. Decisiones injustas.",
+    "descripcion": "Líder racional. Equilibrar mente y ética."
+  },
+  {
+    "id": 65,
+    "carta": "As de Oros",
+    "imagen": "minor_arcana_pentacles_ace",
+    "significado_derecho": "Abundancia, prosperidad, nuevos comienzos. Oportunidad material.",
+    "significado_invertido": "Pérdida financiera, mala planificación. Desperdiciar recursos.",
+    "descripcion": "Semilla de riqueza. Éxito tangible."
+  },
+  {
+    "id": 66,
+    "carta": "2 de Oros",
+    "imagen": "minor_arcana_pentacles_2",
+    "significado_derecho": "Equilibrio financiero, adaptabilidad. Manejar múltiples recursos.",
+    "significado_invertido": "Desequilibrio, estrés económico. Falta de planificación.",
+    "descripcion": "Malabarismo con responsabilidades. Priorizar."
+  },
+  {
+    "id": 67,
+    "carta": "3 de Oros",
+    "imagen": "minor_arcana_pentacles_3",
+    "significado_derecho": "Trabajo en equipo, maestría. Reconocimiento profesional.",
+    "significado_invertido": "Falta de cooperación, mediocridad. Trabajo no valorado.",
+    "descripcion": "Esfuerzo colectivo que rinde frutos. Habilidad reconocida."
+  },
+  {
+    "id": 68,
+    "carta": "4 de Oros",
+    "imagen": "minor_arcana_pentacles_4",
+    "significado_derecho": "Estabilidad, seguridad, conservación. Proteger lo ganado.",
+    "significado_invertido": "Avaricia, rigidez. Miedo a compartir.",
+    "descripcion": "Bienestar material. Evitar el apego excesivo."
+  },
+  {
+    "id": 69,
+    "carta": "5 de Oros",
+    "imagen": "minor_arcana_pentacles_5",
+    "significado_derecho": "Escasez, dificultad material. Buscar ayuda.",
+    "significado_invertido": "Recuperación, apoyo inesperado. Superar la pobreza.",
+    "descripcion": "Momento de necesidad. Lecciones de humildad."
+  },
+  {
+    "id": 70,
+    "carta": "6 de Oros",
+    "imagen": "minor_arcana_pentacles_6",
+    "significado_derecho": "Generosidad, compartir. Equilibrio en dar y recibir.",
+    "significado_invertido": "Desequilibrio, egoísmo. Caridad interesada.",
+    "descripcion": "Justicia económica. Ayudar sin esperar retorno."
+  },
+  {
+    "id": 71,
+    "carta": "7 de Oros",
+    "imagen": "minor_arcana_pentacles_7",
+    "significado_derecho": "Paciencia, inversión a largo plazo. Evaluar progresos.",
+    "significado_invertido": "Frustración, falta de resultados. Impaciencia.",
+    "descripcion": "Esperar el momento adecuado. Trabajo que dará frutos."
+  },
+  {
+    "id": 72,
+    "carta": "8 de Oros",
+    "imagen": "minor_arcana_pentacles_8",
+    "significado_derecho": "Trabajo duro, dedicación. Dominar un oficio.",
+    "significado_invertido": "Pereza, trabajo mediocre. Falta de pasión.",
+    "descripcion": "Maestría mediante esfuerzo. Atención a detalles."
+  },
+  {
+    "id": 73,
+    "carta": "9 de Oros",
+    "imagen": "minor_arcana_pentacles_9",
+    "significado_derecho": "Autosuficiencia, lujo, recompensas. Disfrutar logros.",
+    "significado_invertido": "Materialismo, soledad. Dependencia financiera.",
+    "descripcion": "Felicidad material. Saborear el éxito."
+  },
+  {
+    "id": 74,
+    "carta": "10 de Oros",
+    "imagen": "minor_arcana_pentacles_10",
+    "significado_derecho": "Riqueza, legado, seguridad familiar. Bendiciones completas.",
+    "significado_invertido": "Pérdida material, problemas familiares. Falta de herencia.",
+    "descripcion": "Abundancia que perdura. Estabilidad generacional."
+  },
+  {
+    "id": 75,
+    "carta": "Paje de Oros",
+    "imagen": "minor_arcana_pentacles_page",
+    "significado_derecho": "Aprendizaje práctico, noticias financieras. Nuevos intereses.",
+    "significado_invertido": "Falta de enfoque, irresponsabilidad. Mala gestión.",
+    "descripcion": "Estudiante de lo tangible. Explorar habilidades."
+  },
+  {
+    "id": 76,
+    "carta": "Caballero de Oros",
+    "imagen": "minor_arcana_pentacles_knight",
+    "significado_derecho": "Progreso material, paciencia. Avance constante.",
+    "significado_invertido": "Estancamiento, pereza. Falta de ambición.",
+    "descripcion": "Trabajador confiable. Perseverancia en metas."
+  },
+  {
+    "id": 77,
+    "carta": "Reina de Oros",
+    "imagen": "minor_arcana_pentacles_queen",
+    "significado_derecho": "Abundancia, generosidad, practicidad. Conexión con la naturaleza.",
+    "significado_invertido": "Materialismo, avaricia. Descuidar lo emocional.",
+    "descripcion": "Mujer próspera y cálida. Administrar con sabiduría."
+  },
+  {
+    "id": 78,
+    "carta": "Rey de Oros",
+    "imagen": "minor_arcana_pentacles_king",
+    "significado_derecho": "Prosperidad, seguridad, liderazgo material. Sabiduría financiera.",
+    "significado_invertido": "Avaricia, tiranía. Abusar del poder económico.",
+    "descripcion": "Autoridad en riqueza. Éxito con responsabilidad."
+  }
+]

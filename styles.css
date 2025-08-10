@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color1: #000000;
+  --color2: #ffffff;
+  --color3: #F8F4E1;
+  --color4: #FEBA17;
+  --color5: #74512D;
+  --color6: #4E1F00;
+--font-Titulos: "Protest Revolution", sans-serif;
+--font-Parrafos: "Shalimar", cursive;
+}
+
+.protest-revolution-regular {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.shalimar-regular {
+  font-family: "Shalimar", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 120px;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.tarot-popup {
+  font-family: var(--font-Parrafos);
+}
+.tarot-title {
+    font-family: var(--font-Titulos);
+    color: var(--color4);
+    text-shadow:
+        0 4px 24px var(--color6), 
+        0 2px 8px var(--color1),   
+        0 0 2px var(--color2);   
+}
+.tarot-button {
+  font-family: var(--font-Titulos);
+  color: var(--color6); 
+}
+.smoke-in {
+  animation: smokeAppear 1s ease forwards;
+}
+
+.smoke-out {
+  animation: smokeDisappear 1s ease forwards;
+}
+
+@keyframes smokeAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(12px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes smokeDisappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(12px);
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+header h1 {
+    font-family: var(--font-Titulos);
+    font-size: 3rem;
+    color: var(--color3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+header p{
+    font-family: var(--font-Parrafos);
+    font-size: 2.3rem;
+    color: var(--color3);
+    text-align: center;
+}
+main{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 100%;
+}
+main button {
+    padding: 18px 48px;
+    border: none;
+    border-radius: 32px;
+    background: linear-gradient(90deg, var(--color4) 0%, var(--color5) 100%);
+    color: var(--color2);
+    font-size: 2rem;
+    font-family: var(--font-Titulos);
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 24px var(--color6), 0 2px 8px var(--color1);
+    cursor: pointer;
+    transition: 
+        background 0.4s cubic-bezier(.4,2,.6,1),
+        color 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s;
+}
+
+main button:hover {
+    background: linear-gradient(90deg, var(--color5) 0%, var(--color4) 100%);
+    color: var(--color1);
+    transform: scale(1.07); 
+    box-shadow: 0 8px 32px var(--color4), 0 4px 16px var(--color6);
+    text-shadow: 0 2px 8px var(--color2);
+}
+.cartas-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.carta {
+  text-align: center;
+}
+
+.carta img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.6s;
+}
+
+.carta p {
+  margin-top: 10px;
+  font-family: 'Shalimar', cursive;
+  font-size: 1.2em;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  gap: 5px;
+  padding: 0 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+footer img {
+  width: 130px;
+  height: auto;
+}
+footer p {
+  font-family: var(--font-Parrafos);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color4);
+}
+/* Media Queries para hacer la aplicación de tarot responsiva */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  header h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+  
+  header p {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  
+  main button {
+    padding: 15px 40px;
+    font-size: 1.8rem;
+  }
+  
+  .cartas-container {
+    gap: 15px;
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+  
+  .carta img {
+    width: 130px;
+  }
+  
+  .carta p {
+    font-size: 1.1em;
+  }
+  
+  footer p {
+    font-size: 1.3rem;
+  }
+  
+  footer img {
+    width: 110px;
+  }
+}
+.interpretacion-ia {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: var(--color3);
+  font-family: var(--font-Parrafos);
+}
+
+/* Smartphones y pantallas pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  header p {
+    font-size: 1.6rem;
+    padding: 0 15px;
+    line-height: 1.4;
+  }
+  
+  main {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+  
+  main button {
+    padding: 12px 30px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Cartas en columna para móviles */
+  .cartas-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+  
+  .carta img {
+    width: 200px; /* Más grandes cuando están en columna */
+  }
+  
+  .carta p {
+    font-size: 1.1em;
+    max-width: 250px;
+    line-height: 1.3;
+  }
+  
+  /* Ajuste para SweetAlert en móviles */
+  .tarot-popup {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .tarot-popup p {
+    font-size: 1.4rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  footer {
+    padding: 0 5px 5px;
+  }
+  
+  footer p {
+    font-size: 1.1rem;
+  }
+  
+  footer img {
+    width: 90px;
+  }
+}
+
+/* Smartphones muy pequeños (hasta 480px) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+  
+  main button {
+    padding: 10px 25px;
+    font-size: 1.3rem;
+    border-radius: 25px;
+  }
+  
+  .carta img {
+    width: 200px;
+  }
+  
+  .carta p {
+    font-size: 1em;
+    max-width: 200px;
+  }
+  
+  .tarot-popup p {
+    font-size: 1.2rem !important;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  footer img {
+    width: 80px;
+  }
+}
+
+/* Orientación horizontal en móviles */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  header h1 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+  
+  header p {
+    font-size: 1.3rem;
+  }
+  
+  main {
+    margin-top: 15px;
+  }
+  
+  /* Volver a fila en landscape si hay espacio */
+  .cartas-container {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .carta img {
+    width: 120px;
+  }
+  
+  .carta p {
+    font-size: 0.9em;
+    max-width: 150px;
+  }
+}
+
+/* Pantallas muy grandes (escritorio) */
+@media screen and (min-width: 1200px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+  
+  header p {
+    font-size: 2.5rem;
+  }
+  
+  main button {
+    padding: 20px 55px;
+    font-size: 2.2rem;
+  }
+  
+  .cartas-container {
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .carta img {
+    width: 200px;
+  }
+  
+  .carta p {
+    font-size: 1.3em;
+    max-width: 200px;
+  }
+}

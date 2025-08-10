@@ -1,0 +1,346 @@
+{
+    "copas": [
+        {
+            "carta": "minor_arcana_cups_10",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_2",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_3",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_4",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_5",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_6",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_7",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_8",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_9",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_ace",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_king",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_knight",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_page",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_cups_queen",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        }
+    ],
+    "oros": [
+        {
+            "carta": "minor_arcana_pentacles_10",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_2",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_3",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_4",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_5",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_6",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_7",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_8",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_9",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_ace",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_king",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_knight",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_page",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_pentacles_queen",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        }
+    ],
+    "espadas": [
+        {
+            "carta": "minor_arcana_swords_10",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_2",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_3",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_4",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_5",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_6",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_7",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_8",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_9",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_ace",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_king",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_knight",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_page",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_swords_queen",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        }
+    ],
+    "bastos": [
+        {
+            "carta": "minor_arcana_wands_10",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_2",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_3",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_4",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_5",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_6",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_7",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_8",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_9",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_ace",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_king",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_knight",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_page",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        },
+        {
+            "carta": "minor_arcana_wands_queen",
+            "significado_derecho": "",
+            "significado_invertido": "",
+            "descripcion": ""
+        }
+    ]
+}

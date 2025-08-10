@@ -1,0 +1,2593 @@
+{
+    "description": "Interpretaciones de cartas de Tarot, de la guía _A Guide to Tarot Meanings_ de Mark McElroy (http://www.madebymark.com/a-guide-to-tarot-card-meanings/)", 
+    "tarot_interpretations": [
+        {
+            "fortune_telling": [
+                "Esté atento a nuevos proyectos y nuevos comienzos", 
+                "Prepárese para aceptar algo por fe", 
+                "Algo nuevo llega a su vida; aprovéchelo"
+            ], 
+            "keywords": [
+                "libertad", 
+                "fe", 
+                "inexperiencia", 
+                "inocencia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Liberarse de las limitaciones", 
+                    "Expresar alegría y vigor juvenil", 
+                    "Ser de mente abierta", 
+                    "Dar un salto de fe", 
+                    "Sintonizarse con sus instintos", 
+                    "Ser entusiasta o curioso", 
+                    "Explorar su potencial", 
+                    "Abrazar la innovación y el cambio"
+                ], 
+                "shadow": [
+                    "Ser crédulo e ingenuo", 
+                    "Tomar riesgos innecesarios", 
+                    "No ser serio cuando es necesario", 
+                    "Ser tonto o distraído", 
+                    "Carecer de experiencia", 
+                    "No honrar tradiciones y límites bien establecidos", 
+                    "Comportarse de manera inapropiada"
+                ]
+            }, 
+            "name": "El Loco", 
+            "rank": 0, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Un hombre poderoso puede desempeñar un papel en su día", 
+                "Su situación actual debe verse como un elemento de un plan mucho más grande"
+            ], 
+            "keywords": [
+                "capacidad", 
+                "empoderamiento", 
+                "actividad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tomar acción apropiada", 
+                    "Recibir guía de un poder superior", 
+                    "Convertirse en un canal de la voluntad divina", 
+                    "Expresar energía masculina de manera apropiada y constructiva", 
+                    "Ser tú mismo en todos los sentidos"
+                ], 
+                "shadow": [
+                    "Inflar tu propio ego", 
+                    "Abusar de tus talentos", 
+                    "Manipular o engañar a otros", 
+                    "Ser demasiado agresivo", 
+                    "Usar ilusiones baratas para deslumbrar a otros", 
+                    "Negarte a invertir el tiempo y esfuerzo necesarios para dominar tu oficio", 
+                    "Tomar atajos"
+                ]
+            }, 
+            "name": "El Mago", 
+            "rank": 1, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Llega una mujer misteriosa", 
+                "Puede surgir un secreto sexual", 
+                "Alguien sabe más de lo que revelará"
+            ], 
+            "keywords": [
+                "intuición", 
+                "reflexión", 
+                "pureza", 
+                "iniciación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Escuchar tus sentimientos e intuiciones", 
+                    "Explorar espiritualidad no convencional", 
+                    "Guardar secretos", 
+                    "Ser receptivo", 
+                    "Reflexionar en lugar de actuar", 
+                    "Observar a otros", 
+                    "Preservar la pureza"
+                ], 
+                "shadow": [
+                    "Ser distante", 
+                    "Obsesionarse con secretos y conspiraciones", 
+                    "Rechazar la guía del espíritu o la intuición", 
+                    "Revelar todo", 
+                    "Ignorar corazonadas", 
+                    "Negarse a involucrarse, incluso cuando es apropiado"
+                ]
+            }, 
+            "name": "La Sacerdotisa", 
+            "rank": 2, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "El embarazo está en las cartas", 
+                "Se acerca una oportunidad de participar en una sexualidad lujosa", 
+                "Cuidado con la tendencia a la adicción"
+            ], 
+            "keywords": [
+                "fertilidad", 
+                "productividad", 
+                "madurez", 
+                "crianza"
+            ], 
+            "meanings": {
+                "light": [
+                    "Cuidarte a ti mismo y a otros", 
+                    "Dar frutos", 
+                    "Celebrar tu cuerpo", 
+                    "Tener hijos (literales o figurados)", 
+                    "Disfrutar del lujo", 
+                    "Cuidar a quienes te rodean de manera positiva", 
+                    "Disfrutar de tu sexualidad", 
+                    "Hacer que las cosas sucedan"
+                ], 
+                "shadow": [
+                    "Excederse", 
+                    "Ser codicioso", 
+                    "Asfixiar a alguien con atención", 
+                    "Debilitar a alguien siendo sobreprotector", 
+                    "Obstaculizar la productividad obsesionándose con ella", 
+                    "Ser víctima de comportamientos adictivos"
+                ]
+            }, 
+            "name": "La Emperatriz", 
+            "rank": 3, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Llega una figura paterna", 
+                "Un nuevo empleador o figura de autoridad te dará órdenes", 
+                "Espera disciplina o corrección en el futuro cercano"
+            ], 
+            "keywords": [
+                "autoridad", 
+                "regulación", 
+                "dirección", 
+                "estructura"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ejercer autoridad", 
+                    "Definir límites", 
+                    "Dirigir el flujo de trabajo", 
+                    "Comunicar pautas claras", 
+                    "Tener control de ti mismo y de otros", 
+                    "Templar la masculinidad agresiva con sabiduría y experiencia"
+                ], 
+                "shadow": [
+                    "Microgestionar", 
+                    "Aplastar la creatividad de otros con un enfoque rígido y autoritario", 
+                    "Insistir en salirse con la suya", 
+                    "Adoptar una mentalidad dictatorial", 
+                    "Usar fuerza excesiva para lograr tus metas y mantener el orden"
+                ]
+            }, 
+            "name": "El Emperador", 
+            "rank": 4, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Espera ser sorprendido en una falta y castigado en consecuencia", 
+                "Ora por perdón y confiesa tus errores", 
+                "Un hombre más experimentado, líder espiritual o figura paterna entrará en tu vida"
+            ], 
+            "keywords": [
+                "guía", 
+                "conocimiento", 
+                "revelación", 
+                "creencia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Enseñar o guiar a otros", 
+                    "Buscar la verdad", 
+                    "Pedir guía a un poder superior", 
+                    "Reconocer la sabiduría y experiencia de otros", 
+                    "Hacer votos", 
+                    "Participar en rituales sinceros", 
+                    "Ser voluntario"
+                ], 
+                "shadow": [
+                    "Usar la experiencia para manipular o desorientar a otros", 
+                    "Ser dogmático", 
+                    "Favorecer la tradición sobre lo que es conveniente o necesario", 
+                    "Realizar rituales vacíos", 
+                    "Ocultar sabiduría", 
+                    "Restringir el acceso a verdades espirituales o a los dioses"
+                ]
+            }, 
+            "name": "El Sumo Sacerdote", 
+            "rank": 5, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Florece una nueva relación personal o profesional", 
+                "Abundan las oportunidades sexuales", 
+                "Inesperadamente, un amigo se convierte en amante"
+            ], 
+            "keywords": [
+                "amor", 
+                "pasión", 
+                "unidad", 
+                "elección"
+            ], 
+            "meanings": {
+                "light": [
+                    "Estar enamorado", 
+                    "Mostrar tu amor a otros", 
+                    "Expresar pasión o sentimientos románticos", 
+                    "Alinearte con grupos o personas afines", 
+                    "Unir a las personas", 
+                    "Tomar decisiones bien informadas"
+                ], 
+                "shadow": [
+                    "Pasión debilitante", 
+                    "Permitir que un deseo malsano de amor motive comportamientos destructivos", 
+                    "Interrumpir la unidad", 
+                    "Actuar en contra de los mejores intereses de quienes se preocupan por ti", 
+                    "Decisiones mal informadas"
+                ]
+            }, 
+            "name": "Los Enamorados", 
+            "rank": 6, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "La victoria es segura", 
+                "Avance con todos los planes", 
+                "Cuidado con la envidia de otros"
+            ], 
+            "keywords": [
+                "avance", 
+                "victoria", 
+                "triunfo", 
+                "éxito"
+            ], 
+            "meanings": {
+                "light": [
+                    "Superar barreras", 
+                    "Avanzar con confianza y autoridad", 
+                    "Alcanzar la cima del éxito", 
+                    "Disfrutar de la gloria del logro", 
+                    "Guiar un esfuerzo hacia la victoria total", 
+                    "Establecerte como un líder digno"
+                ], 
+                "shadow": [
+                    "Descansar en los laureles", 
+                    "Pisotear los sentimientos o expectativas de otros", 
+                    "Enfocarse más en éxitos pasados que en oportunidades futuras", 
+                    "No controlar comportamientos impulsivos"
+                ]
+            }, 
+            "name": "El Carro", 
+            "rank": 7, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Tu autocontrol será puesto a prueba", 
+                "Una mujer buscará cambiar a su pareja o amante", 
+                "Eres una persona fuerte y capaz"
+            ], 
+            "keywords": [
+                "disciplina", 
+                "audacia", 
+                "autodisciplina", 
+                "poder", 
+                "vitalidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Imponerte restricciones para tu propio beneficio", 
+                    "Controlar tus pasiones con la razón", 
+                    "Resistir impulsos que van en contra de tus mejores intereses", 
+                    "Tomar acción audaz"
+                ], 
+                "shadow": [
+                    "Ceder a la debilidad, incluso sabiendo que dañará tu salud y felicidad", 
+                    "Caer en la adicción", 
+                    "Permitir que tus instintos te dominen", 
+                    "No defenderte a ti mismo y tus creencias cuando es necesario"
+                ]
+            }, 
+            "name": "La Fuerza", 
+            "rank": 8, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Comienza un período de soledad", 
+                "Una pareja en una relación se va", 
+                "La búsqueda de amor o dinero resulta infructuosa"
+            ], 
+            "keywords": [
+                "soledad", 
+                "experiencia", 
+                "quietud", 
+                "retiro"
+            ], 
+            "meanings": {
+                "light": [
+                    "Convertirte en o buscar un gurú", 
+                    "Ir a un retiro", 
+                    "Recargar baterías espirituales o creativas", 
+                    "Iluminar el camino para quienes tienen menos experiencia", 
+                    "Dar un paso atrás para ganar perspectiva"
+                ], 
+                "shadow": [
+                    "Ser un solitario", 
+                    "Temer el contacto con otros", 
+                    "Creer que lo sabes todo", 
+                    "Exagerar tus afirmaciones de experiencia", 
+                    "Ocultar tus habilidades y talentos por miedo a no ser digno"
+                ]
+            }, 
+            "name": "El Ermitaño", 
+            "rank": 9, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Algunos eventos están en manos del cielo", 
+                "Ya has vivido esto antes", 
+                "¿Qué pasó entonces?"
+            ], 
+            "keywords": [
+                "suerte", 
+                "aleatoriedad", 
+                "ciclos", 
+                "karma", 
+                "destino", 
+                "revolución"
+            ], 
+            "meanings": {
+                "light": [
+                    "Permitir que los eventos se desarrollen", 
+                    "Ver el patrón más grande en eventos cotidianos", 
+                    "Confiar en tu suerte", 
+                    "Observar ciclos", 
+                    "Creer que \"todo vuelve\""
+                ], 
+                "shadow": [
+                    "Perder dinero apostando", 
+                    "Negarte a hacer tu parte para que un plan llegue a buen término", 
+                    "Adoptar un enfoque fatalista de la vida", 
+                    "Luchar contra el curso natural de los eventos"
+                ]
+            }, 
+            "name": "La Rueda de la Fortuna", 
+            "rank": 10, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Pronto se emitirá un veredicto legal", 
+                "Alguien está tomando una decisión", 
+                "Necesitas obtener los hechos"
+            ], 
+            "keywords": [
+                "equilibrio", 
+                "ley", 
+                "justicia", 
+                "objetividad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tomar una decisión objetiva", 
+                    "Sopesar un problema cuidadosamente antes de actuar", 
+                    "Escalar tu reacción a una situación de manera apropiada", 
+                    "Obtener todos los hechos", 
+                    "Considerar evidencia", 
+                    "Deliberar"
+                ], 
+                "shadow": [
+                    "Emitir críticas duras", 
+                    "Obsesionarse con reglas y regulaciones", 
+                    "Seguir las reglas incluso cuando es destructivo o contraproducente", 
+                    "Confundir decisiones rápidas con acción oportuna", 
+                    "Tener favoritismos"
+                ]
+            }, 
+            "name": "La Justicia", 
+            "rank": 11, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Se revela un traidor", 
+                "Uno de tus amigos está trabajando en tu contra", 
+                "Cambia tus caminos o sufre las consecuencias"
+            ], 
+            "keywords": [
+                "iluminación", 
+                "sacrificio", 
+                "perspectiva", 
+                "suspensión", 
+                "inversiones"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ver oportunidades de crecimiento en eventos desagradables", 
+                    "Experimentar un cambio dramático en tu perspectiva personal", 
+                    "Sacar el mejor provecho de un cambio imprevisto en tu vida o trabajo", 
+                    "Suspender la incredulidad", 
+                    "Hacer sacrificios"
+                ], 
+                "shadow": [
+                    "Ser infiel a ti mismo y a tus valores", 
+                    "Negarte a hacer sacrificios cuando es apropiado", 
+                    "Negarte a adaptarte a nuevas situaciones", 
+                    "Culpar a otros", 
+                    "Beneficiarte a expensas de otros"
+                ]
+            }, 
+            "name": "El Colgado", 
+            "rank": 12, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Una relación o enfermedad termina abruptamente", 
+                "Limita los viajes y la toma de riesgos", 
+                "Gloom and doom general"
+            ], 
+            "keywords": [
+                "fin", 
+                "conclusión", 
+                "transición", 
+                "pasaje", 
+                "partida"
+            ], 
+            "meanings": {
+                "light": [
+                    "Poner fin a una fase desagradable de la vida", 
+                    "Reconocer y celebrar el final de algo", 
+                    "Dejar atrás malos hábitos", 
+                    "Convertirte en una nueva persona", 
+                    "Dejar a una persona, lugar o cosa por otra", 
+                    "Dejar ir"
+                ], 
+                "shadow": [
+                    "Obsesionarse con la muerte y el morir", 
+                    "Negarte a abandonar viejos hábitos o relaciones poco saludables", 
+                    "Insistir en que todo y todos deben permanecer igual para siempre", 
+                    "No cuidarte adecuadamente"
+                ]
+            }, 
+            "name": "La Muerte", 
+            "rank": 13, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien está usando drogas o alcohol en exceso", 
+                "Es hora de volver a esa dieta"
+            ], 
+            "keywords": [
+                "mezcla", 
+                "síntesis", 
+                "mediación", 
+                "combinación", 
+                "armonía"
+            ], 
+            "meanings": {
+                "light": [
+                    "Unir opuestos", 
+                    "Moderar tus acciones o emociones", 
+                    "Encontrar un término medio", 
+                    "Llegar a compromisos", 
+                    "Sintetizar soluciones que complazcan a todos los involucrados", 
+                    "Usar lo viejo para hacer algo nuevo"
+                ], 
+                "shadow": [
+                    "Ir a los extremos", 
+                    "Interrumpir esfuerzos grupales", 
+                    "Ignorar enfoques saludables hacia la vida", 
+                    "Convertirte en un adicto", 
+                    "Practicar la glotonería", 
+                    "Destrozar algo o alguien", 
+                    "Romper alianzas"
+                ]
+            }, 
+            "name": "La Templanza", 
+            "rank": 14, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Adulterio e infidelidad", 
+                "Una racha de muy mala suerte se acerca", 
+                "Cuidado con influencias malvadas y lobos con piel de cordero"
+            ], 
+            "keywords": [
+                "sombra", 
+                "materialismo", 
+                "esclavitud", 
+                "engaño"
+            ], 
+            "meanings": {
+                "light": [
+                    "Apreciar los lujos que la vida ofrece", 
+                    "Sentirte cómodo en tu propia piel", 
+                    "Disfrutar de tu sexualidad", 
+                    "Derrochar en un artículo personal costoso", 
+                    "Abrazar el hecho de que todos tienen un lado oscuro", 
+                    "Manejando impulsos poco saludables de manera saludable"
+                ], 
+                "shadow": [
+                    "Enfatizar demasiado las apariencias", 
+                    "Siempre querer más", 
+                    "Valorar posesiones más que personas o relaciones", 
+                    "Permitir que instintos básicos gobiernen tu vida", 
+                    "Ser egoísta", 
+                    "Atribuir tus propios impulsos oscuros a fuerzas externas u otras personas"
+                ]
+            }, 
+            "name": "El Diablo", 
+            "rank": 15, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Desastre inminente", 
+                "Cancela planes y revierte decisiones", 
+                "Alguien quiere bajarte un par de escalones", 
+                "No te contengas; di lo que realmente piensas"
+            ], 
+            "keywords": [
+                "demolición", 
+                "convulsión", 
+                "deconstrucción", 
+                "desastre", 
+                "destrucción"
+            ], 
+            "meanings": {
+                "light": [
+                    "Romper con viejos hábitos y mentalidades limitantes", 
+                    "Despejar el camino para un nuevo crecimiento", 
+                    "Disipar la influencia de un ego inflado", 
+                    "Volver a lo básico", 
+                    "Eliminar ilusiones dañinas", 
+                    "Recibir una visión repentina"
+                ], 
+                "shadow": [
+                    "Aferrarte a tradiciones que reprimen el crecimiento", 
+                    "Participar en la ceguera voluntaria", 
+                    "Rechazar evidencia de que se necesita un cambio", 
+                    "Ignorar la guía de un poder superior", 
+                    "Participar maliciosamente en comportamientos destructivos"
+                ]
+            }, 
+            "name": "La Torre", 
+            "rank": 16, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Hazte una carta astral", 
+                "Alguien está un poco demasiado deslumbrado por las estrellas", 
+                "Lo que está sucediendo ahora ha sido predestinado desde hace mucho tiempo"
+            ], 
+            "keywords": [
+                "esperanza", 
+                "optimismo", 
+                "apertura", 
+                "certeza", 
+                "fe", 
+                "anhelo", 
+                "verdad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Esperar lo mejor", 
+                    "Creer que cosas buenas le pasan a gente buena", 
+                    "Ver eventos de la mejor manera posible", 
+                    "Adoptar un espíritu generoso", 
+                    "Buscar guía desde arriba", 
+                    "Abrazar la posibilidad sobre la probabilidad"
+                ], 
+                "shadow": [
+                    "Negar verdades desagradables", 
+                    "Negar la responsabilidad personal y decir, \"¡Las cosas simplemente suceden!\"",
+                    "Ignorar señales y presagios", 
+                    "Preferir la ilusión a la realidad", 
+                    "Difundir pesimismo y mezquindad de espíritu"
+                ]
+            }, 
+            "name": "La Estrella", 
+            "rank": 17, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Cuidado con problemas a fin de mes", 
+                "Alguien que conoces necesita aullarle a la luna más a menudo", 
+                "Alguien está a punto de cambiar de opinión sobre una decisión importante"
+            ], 
+            "keywords": [
+                "misterio", 
+                "fantasía", 
+                "imaginación", 
+                "sueños", 
+                "incertidumbre"
+            ], 
+            "meanings": {
+                "light": [
+                    "Disfrutar de fantasías y sueños diurnos saludables", 
+                    "Usar tu imaginación", 
+                    "Practicar magia o celebrar la magia de la vida cotidiana", 
+                    "Sintonizarte con los ciclos de la naturaleza", 
+                    "Abrazar lo desconocido"
+                ], 
+                "shadow": [
+                    "Ser incapaz de separar la fantasía de la realidad", 
+                    "Sufrir de delirios", 
+                    "Perder tu aprecio por lo fantástico o mágico", 
+                    "Adoptar una mentalidad implacablemente lógica", 
+                    "No apreciar los misterios de la vida"
+                ]
+            }, 
+            "name": "La Luna", 
+            "rank": 18, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Todo está saliendo rosas (o girasoles, lo que sea)", 
+                "Sea lo que sea que tengas en mente, hazlo porque hoy no puedes perder"
+            ], 
+            "keywords": [
+                "alegría", 
+                "brillantez", 
+                "validación", 
+                "atención", 
+                "energía"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ver las cosas claramente", 
+                    "Experimentar alegría intensa", 
+                    "Celebrar tus propios éxitos", 
+                    "Saber que eres bueno en lo que haces", 
+                    "Ganar reconocimiento por tu genio personal"
+                ], 
+                "shadow": [
+                    "Deslumbrarte con tus propios logros", 
+                    "Absorbente en tu propia autoimagen", 
+                    "Sentirte apresurado y distraído", 
+                    "Esforzarte hasta el punto del agotamiento", 
+                    "Exagerar tus habilidades o tergiversar tus logros"
+                ]
+            }, 
+            "name": "El Sol", 
+            "rank": 19, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Un viejo problema que pensaste que había terminado volverá a surgir hoy", 
+                "Prepárate para grandes cambios: rupturas, llamadas inesperadas de viejos amigos y contratiempos inesperados", 
+                "Dios está tratando de llamar tu atención"
+            ], 
+            "keywords": [
+                "revitalización", 
+                "renovación", 
+                "resurrección", 
+                "evaluación", 
+                "invitación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Recibir una llamada de atención", 
+                    "Descubrir un nuevo propósito en la vida", 
+                    "Convertirte total y completamente en ti mismo", 
+                    "Recibir una recompensa merecida", 
+                    "Pasar una evaluación o examen", 
+                    "Dar la bienvenida al comienzo de una nueva fase de vida"
+                ], 
+                "shadow": [
+                    "Ser pesado en las balanzas y ser hallado falto", 
+                    "No estar a la altura de un estándar bien definido", 
+                    "Ser sorprendido holgazaneando o portándote mal", 
+                    "No prepararte para un examen que sabes que viene", 
+                    "Rechazar una oportunidad de reinventarte"
+                ]
+            }, 
+            "name": "El Juicio", 
+            "rank": 20, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Ganar la lotería", 
+                "Obtener el deseo de tu corazón", 
+                "Tener todo lo que siempre has imaginado tener"
+            ], 
+            "keywords": [
+                "totalidad", 
+                "integración", 
+                "totalidad", 
+                "completitud", 
+                "plenitud"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tenerlo todo", 
+                    "Conocerte y amarte a ti mismo lo más completamente posible", 
+                    "Ver la interconexión de todas las cosas y personas", 
+                    "Mejorar tu perspectiva", 
+                    "Vivir la vida al máximo", 
+                    "Entender el significado de la vida"
+                ], 
+                "shadow": [
+                    "Permitir que la codicia y la envidia te impidan disfrutar lo que posees", 
+                    "No ver el diseño más grande en eventos ordinarios", 
+                    "Creer que todo lo que existe puede ser tocado, contado o medido", 
+                    "No ver lo divino reflejado en quienes te rodean"
+                ]
+            }, 
+            "name": "El Mundo", 
+            "rank": 21, 
+            "suit": "major"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien siente atracción por ti", 
+                "Una nueva oferta de trabajo está en camino", 
+                "Camina suavemente y lleva un gran garrote"
+            ], 
+            "keywords": [
+                "deseo", 
+                "inspiración", 
+                "visión", 
+                "creación", 
+                "invención"
+            ], 
+            "meanings": {
+                "light": [
+                    "Inspirarte", 
+                    "Identificar una meta importante", 
+                    "Tener la oportunidad de hacer lo que quieras hacer", 
+                    "Dar o recibir dirección", 
+                    "Ver una solución", 
+                    "Crear algo nuevo", 
+                    "Excitarse, sexual o creativamente"
+                ], 
+                "shadow": [
+                    "No aprovechar una gran oportunidad", 
+                    "Ser ineficaz o perezoso", 
+                    "Hacer un esfuerzo inadecuado", 
+                    "Trabajar hacia una meta, pero carecer de los recursos o iniciativa para lograrlo", 
+                    "Establecer metas inapropiadas", 
+                    "Negarte a tomar una posición"
+                ]
+            }, 
+            "name": "As de Bastos", 
+            "rank": 1, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Cuidado con falsos amigos", 
+                "No seas tímido; di lo que piensas y haz lo que quieras hacer"
+            ], 
+            "keywords": [
+                "conflicto", 
+                "decisión", 
+                "opción", 
+                "individualidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tener una elección", 
+                    "Ofrecer o que te ofrezcan una opción", 
+                    "Ver el valor en el enfoque de otra persona", 
+                    "Entender que hay más de una manera de \"desollar un gato\"",
+                    "Hacer más de una cosa a la vez con éxito", 
+                    "Ser empoderado para tomar una decisión"
+                ], 
+                "shadow": [
+                    "Falsificar tus intenciones", 
+                    "Hacer una cosa mientras deseas otra", 
+                    "Cambiar de rumbo a mitad del camino sin una buena razón", 
+                    "Negarte a cambiar tu meta incluso cuando ya no tiene sentido perseguirla", 
+                    "Ignorar la opinión de otros"
+                ]
+            }, 
+            "name": "Dos de Bastos", 
+            "rank": 2, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Pronto estarás planeando un viaje", 
+                "Esté atento: su barco está llegando"
+            ], 
+            "keywords": [
+                "implementación", 
+                "acción", 
+                "exploración"
+            ], 
+            "meanings": {
+                "light": [
+                    "Poner un plan en movimiento", 
+                    "Dar ese primer paso crítico", 
+                    "Hacer que cosas buenas sucedan", 
+                    "Ir más allá de tus límites", 
+                    "Abrir nuevos caminos", 
+                    "Empezar con el pie derecho", 
+                    "Ver tus planes llegar a buen término"
+                ], 
+                "shadow": [
+                    "Procrastinar", 
+                    "Saber qué hacer, pero negarte a hacerlo", 
+                    "Lanzar un proyecto sin una definición clara de quién debe hacer qué", 
+                    "Rechazar una oportunidad de probar algo nuevo", 
+                    "No terminar lo que empiezas"
+                ]
+            }, 
+            "name": "Tres de Bastos", 
+            "rank": 3, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien está observando y evaluando tu trabajo", 
+                "Puede que pronto recibas una invitación de boda"
+            ], 
+            "keywords": [
+                "celebración", 
+                "júbilo", 
+                "comunidad", 
+                "trabajo en equipo", 
+                "finalización"
+            ], 
+            "meanings": {
+                "light": [
+                    "Compartir en una gran celebración", 
+                    "Compartir un sentido comunal de logro y éxito", 
+                    "Prepararse para una fiesta", 
+                    "Trabajar juntos hacia una meta común", 
+                    "Dar o ganar premios"
+                ], 
+                "shadow": [
+                    "Mantener la nariz en el trabajo", 
+                    "Reconocer buen trabajo exigiendo más trabajo", 
+                    "No compartir en una celebración grupal", 
+                    "Permitir que la envenenen tu momento al sol", 
+                    "Negarte a hacer tu parte"
+                ]
+            }, 
+            "name": "Cuatro de Bastos", 
+            "rank": 4, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Prepárate para una pelea con tu mejor amigo", 
+                "Recuerda: una vez que sueltas las palabras, no puedes retomarlas"
+            ], 
+            "keywords": [
+                "confrontación", 
+                "disrupción", 
+                "distinción", 
+                "objeción", 
+                "conflicto"
+            ], 
+            "meanings": {
+                "light": [
+                    "Expresar calmadamente una opinión disidente", 
+                    "Permitir que alguien use sus propios métodos para hacer un trabajo", 
+                    "Abrir el piso para discusión o debate", 
+                    "Comparar el progreso hecho hasta ahora con estándares establecidos anteriormente"
+                ], 
+                "shadow": [
+                    "Reprender a otros por sus opiniones ridículas", 
+                    "Buscar peleas", 
+                    "Ofrecer críticas destructivas", 
+                    "Provocar a la gente con comentarios hirientes", 
+                    "Interrumpir el progreso con un flujo interminable de objeciones sin sentido"
+                ]
+            }, 
+            "name": "Cinco de Bastos", 
+            "rank": 5, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien está planeando una fiesta para ti, pero no todos se sienten tan bien por tu reciente éxito", 
+                "Cuidado con amigos envidiosos"
+            ], 
+            "keywords": [
+                "victoria", 
+                "logro", 
+                "éxito", 
+                "triunfo"
+            ], 
+            "meanings": {
+                "light": [
+                    "Superar a tus pares", 
+                    "Ganar una competencia", 
+                    "Ser reconocido como una persona capaz", 
+                    "Tener tu \"momento en el centro de atención\"",
+                    "Ser animado por la multitud", 
+                    "Recibir un premio", 
+                    "Ganar la admiración de otros", 
+                    "Decirle a alguien, \"¡Buen trabajo!\""
+                ], 
+                "shadow": [
+                    "Ser un mal ganador", 
+                    "Permitir que tus logros inflen tu ego", 
+                    "Mirar por encima del hombro a personas que parecen menos capaces", 
+                    "Anhelar ser el centro de atención", 
+                    "Dar o recibir elogios insinceros", 
+                    "Envidiar los logros de otros"
+                ]
+            }, 
+            "name": "Seis de Bastos", 
+            "rank": 6, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "No te sorprendas por un ataque personal", 
+                "Prepárate para defenderte a ti mismo o a alguien que amas"
+            ], 
+            "keywords": [
+                "valentía", 
+                "determinación", 
+                "resolución"
+            ], 
+            "meanings": {
+                "light": [
+                    "Negarte a ser silenciado por miedo o intimidación", 
+                    "Continuar una lucha contra todo pronóstico", 
+                    "Ser feroz", 
+                    "Defenderte de ataques físicos y emocionales", 
+                    "Negarte a tolerar abuso", 
+                    "Aferrarte a tus valores a pesar de toda presión para abandonarlos"
+                ], 
+                "shadow": [
+                    "Tener un complejo de persecución", 
+                    "Tomar riesgos innecesarios como forma de probar tu valentía", 
+                    "Buscar una oportunidad para ofenderse", 
+                    "Responder a críticas constructivas con actitud defensiva", 
+                    "Negarte a defenderte a ti mismo y tus creencias"
+                ]
+            }, 
+            "name": "Siete de Bastos", 
+            "rank": 7, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Esté atento a una carta sorprendente en el correo", 
+                "Todo tu mundo está a punto de ser sacudido"
+            ], 
+            "keywords": [
+                "velocidad", 
+                "rapidez", 
+                "respuesta", 
+                "cambio"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tomar acción rápida", 
+                    "Avanzar con un plan lo más rápido posible", 
+                    "Energizarte", 
+                    "Adaptarte a cambios repentinos", 
+                    "Tomar contratiempos con calma", 
+                    "Abrazar la idea de que nada permanece igual para siempre", 
+                    "Reaccionar rápida y apropiadamente a problemas imprevistos"
+                ], 
+                "shadow": [
+                    "Entrar en pánico", 
+                    "Correr en círculos y gritar", 
+                    "Insistir en que las cosas deben permanecer siempre igual", 
+                    "Revolver la olla solo para ver qué pasa", 
+                    "Apresurar a otros", 
+                    "Negarte a reevaluar un horario o programa, incluso cuando claramente ya no es apropiado"
+                ]
+            }, 
+            "name": "Ocho de Bastos", 
+            "rank": 8, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "No te relajes todavía; hay más por venir", 
+                "La prueba que enfrentas ahora está sucediendo por una razón: mostrarte quiénes son tus verdaderos amigos"
+            ], 
+            "keywords": [
+                "resistencia", 
+                "persistencia", 
+                "estamina", 
+                "lealtad", 
+                "liberación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Mantenerte firme durante toda la duración", 
+                    "Cumplir tus promesas y obligaciones", 
+                    "Soportar una presión increíble", 
+                    "Arrastrarte hasta la línea de meta", 
+                    "Levantarte por tus propios medios", 
+                    "Negarte a rendirte", 
+                    "Ir tan lejos como puedas y estar satisfecho con tu desempeño"
+                ], 
+                "shadow": [
+                    "Convertirte en un mártir", 
+                    "Abandonar tu puesto", 
+                    "Rendirte ante el primer signo de oposición", 
+                    "Ser impedido de cumplir una obligación", 
+                    "Fracasar en ser confiable", 
+                    "Negarte a soltar algo que necesita ser liberado", 
+                    "Golpear un caballo muerto"
+                ]
+            }, 
+            "name": "Nueve de Bastos", 
+            "rank": 9, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Estás agotado",
+                "Retrocede, toma un descanso y deja que alguien más se encargue de las cosas por un tiempo"
+            ], 
+            "keywords": [
+                "agotamiento", 
+                "resistencia", 
+                "carga", 
+                "opresión"
+            ], 
+            "meanings": {
+                "light": [
+                    "Mantenerte firme en circunstancias extremas", 
+                    "Ayudar a otros a llevar sus cargas", 
+                    "Acudir en ayuda de los oprimidos", 
+                    "Conocer y ser honesto sobre tus propios límites", 
+                    "Reconocer cuando no eres adecuado para una tarea particular"
+                ], 
+                "shadow": [
+                    "Asumir más trabajo del que sabes que puedes manejar", 
+                    "Negarte a decir \"No\" cuando ya estás sobrecargado", 
+                    "Hacer un hábito de trabajar horas extras", 
+                    "Proteger a otros de enfrentar las consecuencias de su propio mal juicio", 
+                    "Sobreextenderte regularmente"
+                ]
+            }, 
+            "name": "Diez de Bastos", 
+            "rank": 10, 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un joven o mujer con un carácter fogoso y entusiasta, probablemente nacido bajo Cáncer, Leo o Virgo, que quiere comenzar una nueva relación contigo"
+            ], 
+            "keywords": [
+                "entusiasmo", 
+                "ansias", 
+                "confianza", 
+                "validación", 
+                "afirmación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Lanzarte a una nueva oportunidad", 
+                    "Ser un animador o defensor ardiente de tu causa", 
+                    "Ser un verdadero creyente", 
+                    "Dar los primeros pasos hacia la independencia", 
+                    "Confiar en tus propias habilidades", 
+                    "Pedir retroalimentación"
+                ], 
+                "shadow": [
+                    "Basar toda tu autoimagen en lo que otros piensan", 
+                    "Aferrarte a cada nueva idea que llega a ti sin cuestionarla", 
+                    "Descontar habitualmente la opinión o retroalimentación de otros", 
+                    "Estar tan ansioso por \"hacerlo tú mismo\" que obstaculizas tu propio progreso"
+                ]
+            }, 
+            "name": "Paje de Bastos", 
+            "rank": "page", 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre con una personalidad audaz y apasionada, probablemente nacido entre el 12 de julio y el 11 de agosto, que quiere robarte el corazón"
+            ], 
+            "keywords": [
+                "audacia", 
+                "bravuconería", 
+                "pasión", 
+                "persuasión", 
+                "defensa"
+            ], 
+            "meanings": {
+                "light": [
+                    "Avanzar con decisión", 
+                    "Hacer progreso rápido", 
+                    "Negarte a aceptar límites", 
+                    "Deslumbrar a quienes te rodean con tu ingenio y encanto", 
+                    "Convencer a otros de tu derecho al liderazgo", 
+                    "Convencer a otros de seguirte", 
+                    "Ser un catalizador para el cambio"
+                ], 
+                "shadow": [
+                    "Avanzar a ciegas con habilidades o información inadecuadas", 
+                    "Pisotear los sentimientos de otros", 
+                    "Usar el atractivo sexual para manipular a otros", 
+                    "Forzar tu liderazgo o ideología en otros", 
+                    "Comenzar muchos proyectos sin terminar ninguno"
+                ]
+            }, 
+            "name": "Caballero de Bastos", 
+            "rank": "knight", 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a una mujer con una personalidad atractiva y encantadora, probablemente nacida entre el 11 de marzo y el 20 de abril, que quiere seducirte para que hagas las cosas a su manera"
+            ], 
+            "keywords": [
+                "atención", 
+                "atracción", 
+                "unificación", 
+                "colaboración"
+            ], 
+            "meanings": {
+                "light": [
+                    "Prestar mucha atención", 
+                    "Ayudar a otros a enfocarse en el tema en cuestión", 
+                    "Lograr que todos trabajen juntos", 
+                    "Identificar un terreno común", 
+                    "Unir a las personas, a pesar de sus diferencias", 
+                    "Usar psicología inversa"
+                ], 
+                "shadow": [
+                    "Estar distraído, o usar tus encantos o habilidades para distraer a otros de la meta", 
+                    "Llamar la atención sobre ti mismo con comportamientos negativos o poco saludables", 
+                    "Interrumpir actividades grupales como forma de alimentar tu propio ego"
+                ]
+            }, 
+            "name": "Reina de Bastos", 
+            "rank": "queen", 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre mayor con una personalidad dominante y carismática, probablemente nacido entre el 13 de noviembre y el 12 de diciembre, que prefiere dar órdenes y que sean seguidas"
+            ], 
+            "keywords": [
+                "creatividad", 
+                "ingenio", 
+                "logro", 
+                "dirección"
+            ], 
+            "meanings": {
+                "light": [
+                    "Unir cosas viejas de maneras nuevas y emocionantes", 
+                    "Encontrar soluciones inesperadas", 
+                    "Usar tu experiencia para resolver acertijos y problemas", 
+                    "Hacer lo que te propusiste hacer", 
+                    "Dirigir los esfuerzos de otros"
+                ], 
+                "shadow": [
+                    "Usar tu creatividad para evitar el trabajo honesto", 
+                    "Invertir gran energía en evitar responsabilidades", 
+                    "Alardear de logros sin poner tu experiencia en uso práctico", 
+                    "Dominar a otros"
+                ]
+            }, 
+            "name": "Rey de Bastos", 
+            "rank": "king", 
+            "suit": "wands"
+        }, 
+        {
+            "fortune_telling": [
+                "El romance está en las cartas",
+                "Una nueva relación o matrimonio está a la vuelta de la esquina", 
+                "Las oraciones son respondidas"
+            ], 
+            "keywords": [
+                "intuición", 
+                "espiritualidad", 
+                "afecto", 
+                "motivación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Confiar en tus sentimientos", 
+                    "Abrirte al espíritu", 
+                    "Aceptar y devolver afecto", 
+                    "Conectarte con lo que te motiva", 
+                    "Aprovechar una oportunidad para expresar amor a otros", 
+                    "Escuchar la voz pequeña y tranquila"
+                ], 
+                "shadow": [
+                    "Ocultar tus sentimientos", 
+                    "Rechazar una oportunidad de amar o ser amado", 
+                    "Adormecerte ante anhelos espirituales", 
+                    "Rechazar el consejo de tu corazón", 
+                    "Convertirte en un títere de tus propias emociones", 
+                    "Caer en histeria u obsesión"
+                ]
+            }, 
+            "name": "As de Copas", 
+            "rank": 1, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien tiene un crush secreto por ti", 
+                "Las relaciones deben ser mutuas; deshazte de un parásito"
+            ], 
+            "keywords": [
+                "unión", 
+                "atracción", 
+                "combinación", 
+                "afecto"
+            ], 
+            "meanings": {
+                "light": [
+                    "Sentirse atraído por alguien", 
+                    "Anhelar a alguien o algo", 
+                    "Actuar según tus deseos", 
+                    "Descubrir que un sentimiento es mutuo", 
+                    "Hacer lo que te hace sentir bien", 
+                    "Fusionarse", 
+                    "Sanar lazos rotos", 
+                    "Admitir que dos personas sienten diferente la una por la otra y seguir adelante"
+                ], 
+                "shadow": [
+                    "Quemar puentes", 
+                    "Quedar atrapado en una codependencia poco saludable", 
+                    "Excluir a cualquiera que no sea tu elegido", 
+                    "Obsesionarte con alguien que no corresponde a tus afectos", 
+                    "Desesperarte por encontrar \"El Indicado\"",
+                    "Engañarte sobre tu verdadera orientación"
+                ]
+            }, 
+            "name": "Dos de Copas", 
+            "rank": 2, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Se acerca un romance poco convencional: un amorío con alguien a quien siempre has rechazado"
+            ], 
+            "keywords": [
+                "celebración", 
+                "expresión", 
+                "comunidad", 
+                "amistad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Celebrar tus sentimientos o conexiones con otros", 
+                    "Expresar alegría a través del canto, el baile o el afecto físico", 
+                    "Trabajar junto con otros que comparten tus sentimientos", 
+                    "Realizar actos de servicio como forma de decir, \"Te amo\"",
+                    "Abrazar arreglos románticos poco convencionales"
+                ], 
+                "shadow": [
+                    "Confundir euforia con verdadero afecto", 
+                    "Ser dominado por emociones maníacas", 
+                    "Esperar que todos siempre sientan lo mismo que tú", 
+                    "Exigir apoyo irrazonable de amigos o familia", 
+                    "Festejar hasta un punto peligroso o poco saludable"
+                ]
+            }, 
+            "name": "Tres de Copas", 
+            "rank": 3, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Un amante se está inquietando", 
+                "Descubre lo que necesita, o nuevas oportunidades pueden alejar a tu pareja"
+            ], 
+            "keywords": [
+                "aburrimiento", 
+                "apatía", 
+                "letargo", 
+                "estabilidad", 
+                "ingratitud"
+            ], 
+            "meanings": {
+                "light": [
+                    "Mantener tu estabilidad emocional", 
+                    "Negarte a ceder a emociones abrumadoras", 
+                    "Apreciar lo que tienes y no darlo por sentado", 
+                    "Ver el valor de los compromisos a largo plazo"
+                ], 
+                "shadow": [
+                    "Estar aburrido", 
+                    "Soñar despierto a expensas de tu trabajo", 
+                    "Negarte a comprometerte con una oportunidad", 
+                    "Dar por sentadas a las personas y relaciones", 
+                    "Ignorar oportunidades románticas o espirituales", 
+                    "Rechazar inspiración", 
+                    "Sentir que todo debe permanecer \"tal como es\""
+                ]
+            }, 
+            "name": "Cuatro de Copas", 
+            "rank": 4, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Se acerca una ruptura", 
+                "No llores por leche derramada", 
+                "Acepta tus golpes y vuelve a montar"
+            ], 
+            "keywords": [
+                "pérdida", 
+                "desesperación", 
+                "reevaluación", 
+                "arrepentimiento", 
+                "incertidumbre", 
+                "remordimiento"
+            ], 
+            "meanings": {
+                "light": [
+                    "Reconocer una pérdida y seguir adelante", 
+                    "Enfocarte en cómo el vaso sigue \"medio lleno\"",
+                    "Encontrar el lado positivo en una nube oscura", 
+                    "Reconocer que la pérdida es una parte natural de la vida", 
+                    "Abrazar el duelo saludable", 
+                    "Aprender lecciones de consecuencias duras"
+                ], 
+                "shadow": [
+                    "Revolcarte en un duelo poco saludable o autocompasión", 
+                    "Negarte a seguir adelante y soltar", 
+                    "Aferrarte al pasado", 
+                    "Obsesionarte con vidas pasadas y amores pasados", 
+                    "No vivir en el presente", 
+                    "Castigarte por errores pasados", 
+                    "Permitir que el miedo al fracaso limite tus esfuerzos"
+                ]
+            }, 
+            "name": "Cinco de Copas", 
+            "rank": 5, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Un espíritu tacaño está estrangulando tu disfrute de la vida", 
+                "Relájate y piensa en los demás por una vez, ¿por qué no?"
+            ], 
+            "keywords": [
+                "caridad", 
+                "compartir", 
+                "sacrificio", 
+                "cooperación", 
+                "equidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Donar tu tiempo y talentos a otros", 
+                    "Sentir satisfacción al saber cómo tus esfuerzos ayudarán a otros", 
+                    "Crear un escenario \"ganar-ganar\"",
+                    "Dar incluso cuando sabes que no habrá reembolso", 
+                    "Estar motivado para hacer una buena acción"
+                ], 
+                "shadow": [
+                    "Vincular tu sentido de autoestima a las evaluaciones de otros", 
+                    "Esforzarte por parecer más necesitado de lo que realmente eres", 
+                    "Tomar caridad no merecida o inmerecida", 
+                    "Alardear de tus esfuerzos caritativos", 
+                    "Sacar provecho en tiempos de angustia", 
+                    "Negarte a compartir una carga"
+                ]
+            }, 
+            "name": "Seis de Copas", 
+            "rank": 6, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Te están engañando", 
+                "En lugar de deslumbrarte con palabras y promesas elegantes, exige algo real"
+            ], 
+            "keywords": [
+                "imaginación", 
+                "sueños", 
+                "ilusiones", 
+                "metas"
+            ], 
+            "meanings": {
+                "light": [
+                    "Motivarte con imágenes de éxito futuro", 
+                    "Usar visualización para fomentar el progreso", 
+                    "Tomar un enfoque imaginativo o creativo para resolver problemas", 
+                    "Hacer sueños realidad", 
+                    "Obteniendo perspicacia de visiones personales"
+                ], 
+                "shadow": [
+                    "Obsesionarte con miedos imaginarios o consecuencias inciertas", 
+                    "Ceder al terrorismo emocional o político", 
+                    "Pasar más tiempo soñando que trabajando", 
+                    "No visualizar las posibles repercusiones de tus elecciones", 
+                    "Ser controlado por el miedo"
+                ]
+            }, 
+            "name": "Siete de Copas", 
+            "rank": 7, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien está \"saliendo\" contigo, ahora o en el futuro cercano", 
+                "Tal vez sea hora de dejar de hablar del problema y simplemente seguir adelante"
+            ], 
+            "keywords": [
+                "anhelo", 
+                "insatisfacción", 
+                "búsqueda", 
+                "partida", 
+                "retiro"
+            ], 
+            "meanings": {
+                "light": [
+                    "Querer algo mejor", 
+                    "Abrir tu propio camino", 
+                    "Darte cuenta de que debe haber más en la vida", 
+                    "Dejar atrás una situación poco saludable", 
+                    "Comenzar tu propio negocio", 
+                    "Ir a un retiro", 
+                    "Buscar la \"voz pequeña y tranquila\""
+                ], 
+                "shadow": [
+                    "Ser implacable", 
+                    "Encontrar fallas", 
+                    "Ser quisquilloso", 
+                    "Negarte a establecerse", 
+                    "Huir de problemas o confrontaciones", 
+                    "Decir, \"¡Es mi manera o la carretera!\"",
+                    "Insistir en errores y decepciones pasadas", 
+                    "Amenazar con renunciar como estrategia para salirse con la suya"
+                ]
+            }, 
+            "name": "Ocho de Copas", 
+            "rank": 8, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Obtendrás lo que sea que desees"
+            ], 
+            "keywords": [
+                "satisfacción", 
+                "sensualidad", 
+                "lujo", 
+                "placer"
+            ], 
+            "meanings": {
+                "light": [
+                    "Estar encantado con tus propios logros", 
+                    "Reconocer tus propios talentos y habilidades", 
+                    "Deleitarse con las cosas buenas que la vida tiene para ofrecer", 
+                    "Consentirte", 
+                    "Relajarte y descansar", 
+                    "Tener todo lo que necesitas para sentirte completo"
+                ], 
+                "shadow": [
+                    "Ser presumido", 
+                    "Satisfacerte a expensas de otros", 
+                    "Ser egoísta", 
+                    "Excederte", 
+                    "Evitar el trabajo que necesita hacerse", 
+                    "Reclamar logros o habilidades que no posees", 
+                    "Nunca estar satisfecho, no importa cuánto tengas"
+                ]
+            }, 
+            "name": "Nueve de Copas", 
+            "rank": 9, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "El matrimonio y la familia están en las cartas", 
+                "Espera que una amistad florezca en un romance"
+            ], 
+            "keywords": [
+                "alegría", 
+                "plenitud", 
+                "emoción abrumadora", 
+                "euforia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tener más de lo que alguna vez soñaste", 
+                    "Estar profundamente agradecido por todo lo que se te ha dado", 
+                    "Reconocer la Mano de Dios en los regalos que el Universo te trae", 
+                    "Experimentar alegría trascendente", 
+                    "Alcanzar la felicidad doméstica"
+                ], 
+                "shadow": [
+                    "Comparar tus logros o relaciones con estándares de fantasía poco realistas", 
+                    "Experimentar emociones tan intensas que embotan tu capacidad de lidiar con la realidad", 
+                    "Sentirte abrumado", 
+                    "Envidiando los logros y felicidad de otros"
+                ]
+            }, 
+            "name": "Diez de Copas", 
+            "rank": 10, 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un joven o mujer con un carácter acuoso y soñador, probablemente nacido bajo Libra, Escorpio o Sagitario, que quiere comenzar una nueva relación contigo"
+            ], 
+            "keywords": [
+                "entusiasmo", 
+                "primeras impresiones", 
+                "romanticismo", 
+                "superficialidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Mostrar tus emociones libremente", 
+                    "Lanzarte al romance", 
+                    "Alimentar un crush secreto", 
+                    "Deleitarse en fantasías románticas", 
+                    "Comenzar una nueva relación", 
+                    "Recordar tu primer amor", 
+                    "Experimentar el amor por primera vez", 
+                    "Convertirte a una nueva religión"
+                ], 
+                "shadow": [
+                    "Confundir un crush con amor verdadero", 
+                    "Interpretar intención romántica en acciones inocentes", 
+                    "Intentar desesperadamente impresionar a otros", 
+                    "Caer en un sentimentalismo excesivamente dulce", 
+                    "Fingir más experiencia romántica o espiritual de la que posees"
+                ]
+            }, 
+            "name": "Paje de Copas", 
+            "rank": "page", 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre con una personalidad emocional y sensible, probablemente nacido entre el 13 de octubre y el 11 de noviembre, que quiere que te unas a su última causa apasionada"
+            ], 
+            "keywords": [
+                "fervor", 
+                "celo", 
+                "cambios de humor", 
+                "iluminación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Comprometerte profundamente con una causa", 
+                    "Ceder a emociones fuertes, desde emoción hasta depresión", 
+                    "Actuar solo por intuición", 
+                    "Resolver problemas intuitivamente", 
+                    "Creer en ideales y basar decisiones en ellos en lugar de realidades", 
+                    "Traer intuición o pasión a la mesa"
+                ], 
+                "shadow": [
+                    "Convertirte en un fanático", 
+                    "Rechazar información que sugiere que tus intuiciones están equivocadas", 
+                    "Permitir que tus emociones te controlen", 
+                    "Ceder a celos, confrontación y presión de grupo", 
+                    "Ocultar o ignorar percepciones intuitivas"
+                ]
+            }, 
+            "name": "Caballero de Copas", 
+            "rank": "knight", 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a una mujer con una naturaleza emocional y profundamente espiritual, probablemente nacida entre el 11 de junio y el 11 de julio, que usa apelaciones emocionales y espirituales para influir en otros hacia su punto de vista"
+            ], 
+            "keywords": [
+                "perspicacia", 
+                "espiritualidad", 
+                "compasión", 
+                "empatía", 
+                "instinto"
+            ], 
+            "meanings": {
+                "light": [
+                    "Permitirte ser conmovido por la situación de otros", 
+                    "Sentir emociones fuertes", 
+                    "Poseer una simpatía o empatía inusual", 
+                    "Confiar en tus sentimientos para guiarte", 
+                    "Invocar habilidades psíquicas", 
+                    "Lograr unidad con el Espíritu"
+                ], 
+                "shadow": [
+                    "Quedar tan atrapado en asuntos del Espíritu que te desconectas del mundo", 
+                    "Permitir que la empatía te incapacite (en lugar de inspirar acción)", 
+                    "Usar habilidades psíquicas para ejercer influencia encubierta", 
+                    "Revolcarte en emocionalismo, sentimentalismo o autocompasión"
+                ]
+            }, 
+            "name": "Reina de Copas", 
+            "rank": "queen", 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre mayor con una presencia gentil y sensible, probablemente nacido entre el 9 de febrero y el 10 de marzo, conocido por su equidad y tolerancia"
+            ], 
+            "keywords": [
+                "sabiduría", 
+                "diplomacia", 
+                "restricción", 
+                "composición"
+            ], 
+            "meanings": {
+                "light": [
+                    "Mantener la compostura", 
+                    "Ser valiente y claro frente a circunstancias adversas", 
+                    "Compartir experiencia como forma de consolar a otros", 
+                    "Tomar decisiones justas y empáticas", 
+                    "Honrar el espíritu, no solo la letra, de la ley"
+                ], 
+                "shadow": [
+                    "Permitirte volverte rígido y sin emociones", 
+                    "Tomar decisiones injustas basadas en una agenda oculta", 
+                    "Tomar decisiones sin considerar su impacto emocional en otros", 
+                    "Abusar de la autoridad espiritual", 
+                    "Usar influencia emocional o espiritual para ejercer control poco saludable sobre otros"
+                ]
+            }, 
+            "name": "Rey de Copas", 
+            "rank": "king", 
+            "suit": "cups"
+        }, 
+        {
+            "fortune_telling": [
+                "Es hora de tomar una decisión", 
+                "Deja de vacilar y haz lo que sabes que es mejor"
+            ], 
+            "keywords": [
+                "lógica", 
+                "objetividad", 
+                "intelecto", 
+                "elección"
+            ], 
+            "meanings": {
+                "light": [
+                    "Tomar decisiones objetivas", 
+                    "Aplicar lógica", 
+                    "Razonar tu salida de una situación difícil", 
+                    "Resolver acertijos", 
+                    "Pensar las cosas", 
+                    "Enfatizar los hechos", 
+                    "Despejar tu mente", 
+                    "Buscar claridad"
+                ], 
+                "shadow": [
+                    "Aplicar lógica despiadada o retorcida", 
+                    "Regodearse en tu propio intelecto superior", 
+                    "Usar pensamiento rápido para engañar o confundir a otros", 
+                    "Confundir juicios rápidos con pensamiento rápido", 
+                    "Tomar decisiones sin pensar en las consecuencias"
+                ]
+            }, 
+            "name": "As de Espadas", 
+            "rank": 1, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "A veces, la única manera de ganar es negarse a pelear", 
+                "Estás atascado por ahora; deja pasar el tiempo antes de actuar"
+            ], 
+            "keywords": [
+                "negación", 
+                "debate", 
+                "punto muerto", 
+                "tregua"
+            ], 
+            "meanings": {
+                "light": [
+                    "Negarse a tomar una decisión sin obtener los hechos", 
+                    "Explorar ambos lados de un argumento", 
+                    "Argumentar apasionadamente por lo que crees", 
+                    "Sopesar los problemas", 
+                    "Fomentar el intercambio abierto de ideas", 
+                    "Discutir temas políticos o religiosos sin \"calentarse\""
+                ], 
+                "shadow": [
+                    "Rechazar evidencia que entra en conflicto con creencias arraigadas", 
+                    "Discutir con otros solo por hacerlo", 
+                    "Ser quisquilloso", 
+                    "Posponer una decisión por miedo a enfrentar las consecuencias", 
+                    "Impedir que otros obtengan la información que necesitan para tomar buenas decisiones"
+                ]
+            }, 
+            "name": "Dos de Espadas", 
+            "rank": 2, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Abundan las rupturas e infidelidades", 
+                "Lo que duele ahora, sin embargo, resultará ser bueno para ti más adelante"
+            ], 
+            "keywords": [
+                "variación", 
+                "diferencia", 
+                "insatisfacción", 
+                "dolor de corazón", 
+                "rechazo"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ser lo suficientemente valiente para ver las cosas como realmente son", 
+                    "Ejercer tu ojo crítico", 
+                    "Ser tu propio mejor crítico", 
+                    "Reconocer que las cosas no siempre salen como se planean", 
+                    "Superar el dolor de corazón para abrazar una verdad dolorosa"
+                ], 
+                "shadow": [
+                    "Revolcarte en la desesperación", 
+                    "Permitir que los pensamientos, palabras o acciones de otro te aplasten completamente", 
+                    "Juzgarte demasiado duramente", 
+                    "Mantenerte a un estándar de excelencia poco realista", 
+                    "Llevar el corazón en la manga mientras cargas un chip en el hombro"
+                ]
+            }, 
+            "name": "Tres de Espadas", 
+            "rank": 3, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "No tomes ninguna decisión ahora", 
+                "Espera, y estarás contento de haberlo hecho"
+            ], 
+            "keywords": [
+                "meditación", 
+                "contemplación", 
+                "perspectiva", 
+                "mentalidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Pensar en tus planes antes de ponerlos en acción", 
+                    "Hacer una pausa para meditar o despejar tu mente", 
+                    "Tomarte tiempo para entender a alguien o algo antes de criticarlo", 
+                    "Descansar", 
+                    "Ocupar tus pensamientos con una distracción saludable"
+                ], 
+                "shadow": [
+                    "No pensar las cosas", 
+                    "Confundir procrastinación con reflexión", 
+                    "Adoptar un punto de vista y negarte a reconsiderar tus conclusiones, incluso ante evidencia refutadora", 
+                    "Permitir que el caos y el capricho dominen tus pensamientos"
+                ]
+            }, 
+            "name": "Cuatro de Espadas", 
+            "rank": 4, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Alguien te está robando, financiera o románticamente", 
+                "Ten cuidado con amigos que hablan a tus espaldas"
+            ], 
+            "keywords": [
+                "egoísmo", 
+                "hostilidad", 
+                "irracionalidad", 
+                "autopreservación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Actuar en tu propio mejor interés", 
+                    "Elegir defenderte", 
+                    "No ceder ante el desacuerdo y la discordia", 
+                    "Tomar una posición", 
+                    "Negarte a participar en un plan poco ético", 
+                    "Saber cuándo doblar las reglas"
+                ], 
+                "shadow": [
+                    "Aprovecharte de otros", 
+                    "Intimidar a otros", 
+                    "Actuar de manera poco ética", 
+                    "Buscar peleas", 
+                    "Usar palabras para incitar a otros a violencia e irracionalidad", 
+                    "Ignorar reglas que has acordado cumplir", 
+                    "Velar por ti mismo mientras permites que otros sufran daño", 
+                    "Regodearse en la victoria"
+                ]
+            }, 
+            "name": "Cinco de Espadas", 
+            "rank": 5, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Pronto harás un largo viaje sobre el agua", 
+                "Las acciones tienen consecuencias inesperadas, así que prepárate"
+            ], 
+            "keywords": [
+                "adaptación", 
+                "ajustes", 
+                "ciencia", 
+                "viaje"
+            ], 
+            "meanings": {
+                "light": [
+                    "Sacar el mejor provecho de una mala situación", 
+                    "Recuperarte de una derrota", 
+                    "Reajustar expectativas", 
+                    "Hacer concesiones para circunstancias inesperadas", 
+                    "Ayudar a otros que se encuentran en circunstancias difíciles", 
+                    "Cambiar la forma en que ves el mundo", 
+                    "Ampliar tu perspectiva a través del estudio o viajes"
+                ], 
+                "shadow": [
+                    "Negarte a aceptar que las cosas han cambiado", 
+                    "Jugar a la víctima", 
+                    "Rechazar la idea de que tus acciones tienen consecuencias", 
+                    "Aplicar criterios científicos a asuntos de fe, o confundir fe con ciencia", 
+                    "Creer que el mundo entero debería ser como tu pequeño rincón del mismo"
+                ]
+            }, 
+            "name": "Seis de Espadas", 
+            "rank": 6, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "No asumas que las personas a tu alrededor son dignas de tu confianza", 
+                "Pide una explicación de dónde han estado las personas y qué han estado haciendo"
+            ], 
+            "keywords": [
+                "deshonestidad", 
+                "presunción", 
+                "sigilo", 
+                "suposiciones"
+            ], 
+            "meanings": {
+                "light": [
+                    "Negarte a hacer algo deshonesto, incluso cuando no hay posibilidad de ser descubierto", 
+                    "Manejar una situación difícil con delicadeza", 
+                    "Señalar suposiciones", 
+                    "Actuar éticamente en público y en privado", 
+                    "Vivir una vida que está más allá del reproche"
+                ], 
+                "shadow": [
+                    "Robar o mentir", 
+                    "Hacer lo que puedas salirte con la tuya, simplemente porque puedes", 
+                    "Buscar una manera de evitar consecuencias", 
+                    "Justificar comportamiento malvado enfocándote en la maldad de otros", 
+                    "No examinar tus propios motivos y prejuicios"
+                ]
+            }, 
+            "name": "Siete de Espadas", 
+            "rank": 7, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Supera el papel de víctima", 
+                "Una vez que te das cuenta de que eres tu mayor obstáculo, nada puede detenerte"
+            ], 
+            "keywords": [
+                "restricción", 
+                "limitación", 
+                "confinamiento", 
+                "impotencia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Honrar límites", 
+                    "Respetar las reglas", 
+                    "Decidir hacer una dieta por el bien de tu salud", 
+                    "Reconocer que no siempre puedes estar en control", 
+                    "Identificar obstáculos para un mayor progreso", 
+                    "Negarte a pensar en opciones poco saludables o poco éticas", 
+                    "Pedir ayuda"
+                ], 
+                "shadow": [
+                    "Sentirte atrapado", 
+                    "Perderte en un laberinto de reglas y regulaciones", 
+                    "Caer en la desesperación", 
+                    "Jugar a la víctima", 
+                    "Permitir que otros dicten lo que puedes y no puedes hacer", 
+                    "Quedar impotente", 
+                    "Tener muy pocas opciones", 
+                    "No buscar una salida"
+                ]
+            }, 
+            "name": "Ocho de Espadas", 
+            "rank": 8, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Si tomas la acción que estás considerando ahora, te arrepentirás en el futuro"
+            ], 
+            "keywords": [
+                "remordimiento", 
+                "preocupación", 
+                "angustia", 
+                "conclusión"
+            ], 
+            "meanings": {
+                "light": [
+                    "Negarte a preocuparte por lo que no puedes controlar", 
+                    "Rechazar la ansiedad", 
+                    "Juzgar tu propio desempeño con bondad y gentileza", 
+                    "Usar meditación para calmar una mente turbulenta", 
+                    "Enfrentar pesadillas y miedos", 
+                    "Llegar a una conclusión y sacar un problema de tu mente"
+                ], 
+                "shadow": [
+                    "Atormentarte con arrepentimientos", 
+                    "Cuestionar cada movimiento", 
+                    "Castigarte por tus errores", 
+                    "Depresión", 
+                    "Obsesionarte con errores y detalles pasados por alto", 
+                    "Negarte a manejar el estrés de manera saludable", 
+                    "Arruinar tu capacidad de apreciar el presente al obsesionarte con el pasado", 
+                    "Debatir decisiones irreversibles"
+                ]
+            }, 
+            "name": "Nueve de Espadas", 
+            "rank": 9, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Desastre", 
+                "Posponer planes y no tomar acción hasta que los augurios sean mejores"
+            ], 
+            "keywords": [
+                "agotamiento", 
+                "ruina", 
+                "desastre", 
+                "resistencia", 
+                "obsesión"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ver las señales de que has alcanzado tus límites", 
+                    "Prestar atención a lo que tu cuerpo está tratando de decirte", 
+                    "Ceder a la necesidad de descanso y renovación", 
+                    "Reconocer que has tocado fondo", 
+                    "Comprometerte con un cambio", 
+                    "Saber que lo peor ha pasado"
+                ], 
+                "shadow": [
+                    "Aceptar la derrota prematuramente", 
+                    "Conducirte al agotamiento total, especialmente mental", 
+                    "Experimentar un colapso mental", 
+                    "Obsesionarte con un problema hasta el punto de ruptura", 
+                    "Rendirte", 
+                    "Negarte a pasar del pensamiento a la acción", 
+                    "Pensamientos profundamente poco saludables"
+                ]
+            }, 
+            "name": "Diez de Espadas", 
+            "rank": 10, 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un joven o mujer con un carácter aéreo e intelectual, probablemente nacido bajo Capricornio, Acuario o Piscis, que quiere aprender algo nuevo de ti o tener una discusión contigo"
+            ], 
+            "keywords": [
+                "estudiante", 
+                "aprendiz", 
+                "beca", 
+                "información"
+            ], 
+            "meanings": {
+                "light": [
+                    "Perseguir un curso de estudio", 
+                    "Hacer buenas preguntas", 
+                    "Invertir tiempo en estudio y práctica", 
+                    "Hacer investigación", 
+                    "Hacer un hábito de aprender cosas nuevas", 
+                    "Comenzar una investigación", 
+                    "Esbozar lo que necesitas saber", 
+                    "Encontrar un mentor o maestro"
+                ], 
+                "shadow": [
+                    "Fingir conocimiento o sofisticación que no posees", 
+                    "Hacer trampa en un examen", 
+                    "Fingir interés como forma de ganar favor", 
+                    "Considerar solo la evidencia que apoya conclusiones que ya has sacado", 
+                    "Rechazar el sabio consejo de maestros experimentados"
+                ]
+            }, 
+            "name": "Paje de Espadas", 
+            "rank": "page", 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Un error lleva a alguien a decir algo de lo que se arrepiente", 
+                "Si fuiste tú, prepárate para disculparte y seguir adelante"
+            ], 
+            "keywords": [
+                "franqueza", 
+                "inteligencia", 
+                "incisividad", 
+                "investigación"
+            ], 
+            "meanings": {
+                "light": [
+                    "Decir lo que piensas", 
+                    "Dar a conocer tus opiniones", 
+                    "Ofrecer crítica constructiva", 
+                    "Compartir tu conocimiento", 
+                    "Hacer observaciones perspicaces", 
+                    "Señalar el problema", 
+                    "Aclarar lo que otros han dicho", 
+                    "Dar dirección clara a otros", 
+                    "Descubrir la verdad"
+                ], 
+                "shadow": [
+                    "Declarar tus opiniones como hechos", 
+                    "Buscar peleas", 
+                    "Iniciar argumentos", 
+                    "Usar insultos ingeniosos para socavar la confianza de otros", 
+                    "Tirar la razón por la ventana", 
+                    "Hablar sin tomar en cuenta los sentimientos de otros", 
+                    "Ir en una cacería de brujas", 
+                    "Distorsionar evidencia"
+                ]
+            }, 
+            "name": "Caballero de Espadas", 
+            "rank": "knight", 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a una mujer con una naturaleza artística e intelectual, probablemente nacida entre el 12 de septiembre y el 12 de octubre, que usa comunicación inteligente y positiva para influir en otros hacia su punto de vista"
+            ], 
+            "keywords": [
+                "gracia", 
+                "habilidad", 
+                "ingenio", 
+                "encanto", 
+                "aptitud"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ejercer tacto o usar diplomacia", 
+                    "Desactivar una situación tensa", 
+                    "Saber qué decir y cómo decirlo", 
+                    "Hacer que otros se sientan cómodos y confiados", 
+                    "Sacar lo mejor de todos", 
+                    "Tener facilidad de palabra", 
+                    "Contar chistes", 
+                    "Poseer un don para la música, matemáticas, arte o ciencia"
+                ], 
+                "shadow": [
+                    "Saber exactamente qué decir para destruir a otra persona", 
+                    "Retener información crítica", 
+                    "Usar una lengua afilada para molestar a otros", 
+                    "Emplear sarcasmo", 
+                    "Imitar a otros de manera cruel", 
+                    "Burlarte de los menos afortunados", 
+                    "Ser irrespetuoso", 
+                    "No usar el talento que se te ha dado"
+                ]
+            }, 
+            "name": "Reina de Espadas", 
+            "rank": "queen", 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre mayor con un espíritu perspicaz y deliberado, probablemente nacido entre el 11 de mayo y el 10 de junio, conocido por su integridad y aguda capacidad de toma de decisiones"
+            ], 
+            "keywords": [
+                "genio", 
+                "experiencia", 
+                "decisión", 
+                "veredicto"
+            ], 
+            "meanings": {
+                "light": [
+                    "Expresarte con firmeza y autoridad", 
+                    "Emitir una decisión final", 
+                    "Consultar a un experto", 
+                    "Llamar a asesores y consultores", 
+                    "Llegar a una conclusión final", 
+                    "Alcanzar un acuerdo beneficioso basado en información sólida"
+                ], 
+                "shadow": [
+                    "Insistir en tener la última palabra", 
+                    "Alardear de tu capacidad intelectual", 
+                    "Hablar \"por encima de las cabezas\" de otros", 
+                    "Vacilar en una decisión importante", 
+                    "Cambiar constantemente de opinión", 
+                    "Negarte a tomar decisiones que son en tu propio mejor interés", 
+                    "Desear en vano poder retractarte de lo dicho"
+                ]
+            }, 
+            "name": "Rey de Espadas", 
+            "rank": "king", 
+            "suit": "swords"
+        }, 
+        {
+            "fortune_telling": [
+                "Tu salud mejorará", 
+                "El cheque que buscas realmente está en el correo"
+            ], 
+            "keywords": [
+                "salud", 
+                "riqueza", 
+                "practicidad", 
+                "recepción"
+            ], 
+            "meanings": {
+                "light": [
+                    "Esbozar un plan para lograr prosperidad", 
+                    "Tomar conciencia de oportunidades para mejorar ingresos o salud", 
+                    "Darte cuenta de que tienes todo lo que necesitas", 
+                    "Apreciar todo lo que el Universo te ha dado", 
+                    "Recibir el regalo perfecto en el momento perfecto"
+                ], 
+                "shadow": [
+                    "Caer en el consumismo desenfrenado", 
+                    "Querer más, no importa cuánto tengas", 
+                    "Obsesionarte con tu saldo bancario", 
+                    "Sufrir de hipocondría", 
+                    "Consumir bendiciones sin expresar gratitud", 
+                    "Tomar lo que quieres sin preocuparte por las necesidades de otros"
+                ]
+            }, 
+            "name": "As de Oros", 
+            "rank": 1, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Es hora de equilibrar el presupuesto", 
+                "Evita la tentación de gastar fondos críticos en bienes frívolos"
+            ], 
+            "keywords": [
+                "evaluación", 
+                "decisión", 
+                "presupuesto", 
+                "diagnóstico"
+            ], 
+            "meanings": {
+                "light": [
+                    "Sopesar opciones", 
+                    "Comparar precios", 
+                    "Determinar el valor de una opción sobre otra", 
+                    "Hacer malabarismos con recursos para llegar a fin de mes", 
+                    "Tomar decisiones difíciles basadas en lo que es mejor para tu cuerpo o tu bolsillo", 
+                    "Mirar el resultado final", 
+                    "Pedir una segunda opinión sobre problemas de salud"
+                ], 
+                "shadow": [
+                    "Participar en comparaciones de precios interminables", 
+                    "Posponer una decisión de compra por miedo a encontrar un valor ligeramente mejor más adelante", 
+                    "Comprar algo sin considerar el valor", 
+                    "Romper tu presupuesto con gastos innecesarios", 
+                    "Participar en comportamientos sin considerar cómo afectarán a tu cuerpo o bolsillo"
+                ]
+            }, 
+            "name": "Dos de Oros", 
+            "rank": 2, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Un contrato de alto valor está en tu futuro", 
+                "Si trabajas duro, tendrás éxito"
+            ], 
+            "keywords": [
+                "expresión", 
+                "producción", 
+                "trabajo", 
+                "contribución"
+            ], 
+            "meanings": {
+                "light": [
+                    "Terminar un proyecto", 
+                    "Establecer y cumplir estándares", 
+                    "Actuar según especificaciones", 
+                    "Hacer algo que otros valoran", 
+                    "Crear algo nuevo", 
+                    "Hacer tu parte en un proyecto grupal", 
+                    "Entregar exactamente lo que otros han pedido"
+                ], 
+                "shadow": [
+                    "Halagar los gustos de otros", 
+                    "No entregar lo que has prometido", 
+                    "No entregar tu mejor trabajo a menos que estés bajo supervisión cercana", 
+                    "Ignorar o romper acuerdos con aquellos que han invertido en ti", 
+                    "Negarte a hacer tu parte", 
+                    "No cumplir con un acuerdo claramente delineado contigo mismo o con otros"
+                ]
+            }, 
+            "name": "Tres de Oros", 
+            "rank": 3, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Se acerca un día lluvioso—es hora de ahorrar"
+            ], 
+            "keywords": [
+                "protección", 
+                "conservación", 
+                "preservación", 
+                "seguridad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Ahorrar para un día lluvioso", 
+                    "Ayunar como parte de una práctica espiritual", 
+                    "Hacer dieta en un esfuerzo por mejorar tu cuerpo", 
+                    "Abstenerse de sexo como forma de honrar una tradición espiritual o promesa personal", 
+                    "Ser financieramente conservador", 
+                    "Establecer un fondo fiduciario", 
+                    "Abrir una cuenta de ahorros"
+                ], 
+                "shadow": [
+                    "Ser tacaño", 
+                    "Negarte a gastar dinero que necesita ser gastado", 
+                    "Negar sexo a tu pareja", 
+                    "Cuidar solo de tus propias necesidades, sin considerar las de otros", 
+                    "Gastar un dólar para ahorrar un centavo", 
+                    "No ser un buen administrador de las bendiciones que se te han dado"
+                ]
+            }, 
+            "name": "Cuatro de Oros", 
+            "rank": 4, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Las finanzas se están ajustando", 
+                "Prepárate para un revés"
+            ], 
+            "keywords": [
+                "pobreza", 
+                "indigencia", 
+                "necesidad", 
+                "crisis"
+            ], 
+            "meanings": {
+                "light": [
+                    "Reconocer tus necesidades y tomar acción para satisfacerlas", 
+                    "Hacer tanto como puedas con lo poco que tienes", 
+                    "Admitir que necesitas ayuda", 
+                    "Abrazar la ayuda que llega a ti", 
+                    "Enfocarte en lo que tienes versus lo que no", 
+                    "Buscar la luz al final del túnel"
+                ], 
+                "shadow": [
+                    "Exagerar tus necesidades financieras o físicas", 
+                    "Adoptar una mentalidad de pobreza", 
+                    "Negarte a mantenerte", 
+                    "Rechazar ofertas de apoyo", 
+                    "Jugar al mártir", 
+                    "Rechazar oportunidades para mejorar tu salud o finanzas", 
+                    "Revolcarte en la miseria"
+                ]
+            }, 
+            "name": "Cinco de Oros", 
+            "rank": 5, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Cuando necesites ayuda, pídela", 
+                "Recuerda, sin embargo: lo que recibas puede estar limitado por lo que has dado a otros en el pasado"
+            ], 
+            "keywords": [
+                "caridad", 
+                "equidad", 
+                "cooperación", 
+                "compartir"
+            ], 
+            "meanings": {
+                "light": [
+                    "Dar tiempo, dinero o esfuerzo a una caridad", 
+                    "Participar en un esfuerzo grupal", 
+                    "Prestar tus recursos a otros sin esperar nada a cambio", 
+                    "Asegurarte de que todos sean tratados por igual", 
+                    "Trabajar juntos hacia una meta común", 
+                    "Redistribuir riqueza, tiempo o atención", 
+                    "Diezmar", 
+                    "Compartir crédito por tu éxito"
+                ], 
+                "shadow": [
+                    "Hacer un préstamo como medio de ganar control sobre alguien", 
+                    "Usar actos caritativos para llamar la atención sobre ti mismo", 
+                    "Dividir trabajo o recursos injustamente", 
+                    "No hacer tu parte en un esfuerzo grupal", 
+                    "Ignorar obligaciones y compromisos"
+                ]
+            }, 
+            "name": "Seis de Oros", 
+            "rank": 6, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Las cosas no saldrán como se espera", 
+                "Recoge los pedazos y prepárate para seguir adelante"
+            ], 
+            "keywords": [
+                "evaluación", 
+                "valoración", 
+                "reevaluación", 
+                "reflexión"
+            ], 
+            "meanings": {
+                "light": [
+                    "Medir el progreso hacia tu meta", 
+                    "Mirar resultados con un ojo hacia mejorar el desempeño", 
+                    "Preguntar, \"¿Qué tan feliz soy?\"",
+                    "Generar ideas para mejorar tu salud o prosperidad", 
+                    "Decidir que es hora de un cambio", 
+                    "Expresar una opinión honesta"
+                ], 
+                "shadow": [
+                    "Distraerte con pensamientos melancólicos", 
+                    "Anhelar \"los buenos viejos tiempos\"",
+                    "Castigarte por oportunidades perdidas", 
+                    "Juzgar tu propio trabajo con dureza", 
+                    "Mantener a otros a estándares inapropiados", 
+                    "Negarte a participar en un proyecto, luego quejarte de la calidad del resultado"
+                ]
+            }, 
+            "name": "Siete de Oros", 
+            "rank": 7, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Deja de sobreanalizar, investigar y delinear", 
+                "Aprieta los dientes y haz el trabajo"
+            ], 
+            "keywords": [
+                "esfuerzo", 
+                "trabajo diligencia", 
+                "habilidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Hacer tu mejor esfuerzo", 
+                    "Traer entusiasmo y celo a tu trabajo", 
+                    "Esforzarte por ser lo mejor que puedas ser", 
+                    "Encontrar el trabajo adecuado para ti", 
+                    "Cuidar los pequeños detalles", 
+                    "Convertirte en un artesano altamente calificado", 
+                    "Construir algo con tus manos", 
+                    "Hacer un regalo hecho a mano"
+                ], 
+                "shadow": [
+                    "Trabajarte hasta la muerte", 
+                    "Hacer un trabajo mediocre o descuidado", 
+                    "Continuar en un trabajo que odias", 
+                    "Comprar regalos sin pensar", 
+                    "Producir trabajo con artesanía deficiente", 
+                    "Apresurarte en tu trabajo", 
+                    "Rechazar oportunidades para aprender más sobre tu oficio"
+                ]
+            }, 
+            "name": "Ocho de Oros", 
+            "rank": 8, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Hasta que no aprecies lo que tienes, no tendrás suerte consiguiendo más"
+            ], 
+            "keywords": [
+                "entrenamiento", 
+                "disciplina", 
+                "confianza", 
+                "suficiente"
+            ], 
+            "meanings": {
+                "light": [
+                    "Invertir tiempo en aprender o enseñar una tarea difícil", 
+                    "Restringirte de extremos físicos o financieros", 
+                    "Hacer sacrificios como forma de alcanzar metas más grandes", 
+                    "Desglosar una tarea compleja en pasos simples", 
+                    "Querer lo que tienes", 
+                    "Conocer la diferencia entre necesidades y deseos"
+                ], 
+                "shadow": [
+                    "Ser asignado a una tarea sin estar capacitado para realizarla", 
+                    "Perseguir una posición para la que no estás calificado", 
+                    "Ignorar requisitos", 
+                    "Negarte a dedicar tiempo o atención adecuados al aprender sobre algo o alguien nuevo", 
+                    "Siempre anhelar más"
+                ]
+            }, 
+            "name": "Nueve de Oros", 
+            "rank": 9, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Grandes sumas de dinero están en el futuro cercano", 
+                "Espera una poderosa bendición que viene hacia ti"
+            ], 
+            "keywords": [
+                "riqueza", 
+                "abundancia", 
+                "adquisición", 
+                "codicia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Celebrar tus bendiciones físicas y financieras", 
+                    "Darte cuenta de lo afortunado o bendecido que eres", 
+                    "Estar satisfecho con tus logros físicos y financieros", 
+                    "Aprovechar al máximo \"tiempos de abundancia\"",
+                    "Disfrutar de un festín", 
+                    "Colmar a amigos o familia con regalos"
+                ], 
+                "shadow": [
+                    "Gastar todo tu dinero en regalos y posesiones extravagantes", 
+                    "Intentar demasiado impresionar a otros con tu riqueza o físico", 
+                    "Dar un regalo inapropiadamente costoso como medio de ganar favor", 
+                    "Obsesionarte con asuntos de peso, salud o finanzas", 
+                    "Siempre preguntar, \"¿Qué hay para mí?\""
+                ]
+            }, 
+            "name": "Diez de Oros", 
+            "rank": 10, 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un joven o mujer con un carácter terrenal y práctico, probablemente nacido bajo Aries, Tauro o Géminis, que juguetonamente te anima a tomar riesgos financieros o sexuales"
+            ], 
+            "keywords": [
+                "practicidad", 
+                "prosperidad", 
+                "aprendizaje", 
+                "crecimiento", 
+                "adolescencia"
+            ], 
+            "meanings": {
+                "light": [
+                    "Aprender el valor de un dólar", 
+                    "Comenzar un plan de ahorros", 
+                    "Dar los primeros pasos para salir de deudas", 
+                    "Aprender nuevas tareas físicas", 
+                    "Descubrir tu sexualidad", 
+                    "Lanzar una dieta, un programa de levantamiento de pesas o un esfuerzo relacionado con la salud", 
+                    "Aprender haciendo"
+                ], 
+                "shadow": [
+                    "Intentar parecer más saludable o rico de lo que realmente eres", 
+                    "Gastar dinero imprudentemente", 
+                    "Vivir estrictamente para hoy, sin pensar en el mañana", 
+                    "Tener actitudes inmaduras hacia el sexo y la sexualidad", 
+                    "Usar riqueza o belleza como excusa para no tener que aprender y crecer"
+                ]
+            }, 
+            "name": "Paje de Oros", 
+            "rank": "page", 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Una persona tacaña puede regañarte por gastar dinero", 
+                "Prepárate para defender una decisión económica o sexual"
+            ], 
+            "keywords": [
+                "precaución", 
+                "enfoque", 
+                "realismo", 
+                "invención"
+            ], 
+            "meanings": {
+                "light": [
+                    "Gastar dinero sabiamente", 
+                    "Ahorrar para un día lluvioso", 
+                    "Prestar mucha atención a detalles físicos o financieros", 
+                    "Saber a dónde va cada dólar", 
+                    "Tener sexo seguro", 
+                    "Preferir hechos a \"buenos sentimientos\"",
+                    "Encontrar formas creativas de \"arreglárselas\" con los recursos a mano", 
+                    "Completar un nuevo invento"
+                ], 
+                "shadow": [
+                    "Lanzar la precaución al viento", 
+                    "Gastar sin considerar las consecuencias", 
+                    "Gastar en lujos cuando faltan necesidades", 
+                    "Escapar del estrés gastando dinero", 
+                    "Obsesionarte con pequeños detalles físicos o financieros", 
+                    "Perseguir perpetuamente algún nuevo chuchería", 
+                    "Copiar el trabajo de otro y reclamarlo como propio"
+                ]
+            }, 
+            "name": "Caballero de Oros", 
+            "rank": "knight", 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a una mujer con una naturaleza expansiva y sensual, probablemente nacida entre el 13 y el 31 de diciembre, que usa atractivo sensual y la promesa de recompensa para influir en otros hacia su punto de vista"
+            ], 
+            "keywords": [
+                "lujo", 
+                "comodidad", 
+                "ingenio", 
+                "generosidad", 
+                "prosperidad"
+            ], 
+            "meanings": {
+                "light": [
+                    "Apreciar buena comida, buen vino, arte hermoso, cuerpos hermosos o cualquiera de las mejores cosas de la vida", 
+                    "Deleitarse en sexualidad saludable", 
+                    "Consentirte", 
+                    "Derrochar en el ocasional artículo \"agradable de tener\"",
+                    "Recompensar a alguien con compensación más allá de las expectativas", 
+                    "Tenerlo todo"
+                ], 
+                "shadow": [
+                    "Caer en la glotonería o codicia", 
+                    "Volverse insaciable", 
+                    "Embotar el impacto de los gustos al disfrutarlos demasiado a menudo", 
+                    "Proporcionar comodidad física sin satisfacer necesidades emocionales", 
+                    "Permitir que un sentimiento de derecho distorsione tu gratitud por lo que se te ha dado"
+                ]
+            }, 
+            "name": "Reina de Oros", 
+            "rank": "queen", 
+            "suit": "coins"
+        }, 
+        {
+            "fortune_telling": [
+                "Esta carta representa a un hombre mayor con un espíritu conservador financiera, social y políticamente, probablemente nacido entre el 12 de agosto y el 11 de septiembre, conocido por poner su dinero donde está su boca"
+            ], 
+            "keywords": [
+                "estabilidad", 
+                "confiabilidad", 
+                "confianza", 
+                "intervención"
+            ], 
+            "meanings": {
+                "light": [
+                    "Volverse libre de deudas", 
+                    "Tener más que suficiente para sobrevivir", 
+                    "Hacer contribuciones a un plan de ahorros", 
+                    "Tomar un nuevo trabajo con miras a avanzar en tu carrera", 
+                    "Comprar seguro de vida o salud", 
+                    "Ser confiado en el dormitorio", 
+                    "Asumir el papel de alguien que hace cumplir las reglas cuando se te pide que lo hagas"
+                ], 
+                "shadow": [
+                    "Volverte tan conservador que resistes todo cambio por principio", 
+                    "Ignorar innovaciones en nombre de preservar la tradición", 
+                    "Ser presumido o engreído", 
+                    "Volverte implacablemente dedicado al beneficio o placer", 
+                    "Ser sexualmente egoísta", 
+                    "Dar órdenes a otros, especialmente cuando no tienes autoridad para hacerlo"
+                ]
+            }, 
+            "name": "Rey de Oros", 
+            "rank": "king", 
+            "suit": "coins"
+        }
+    ]
+}
