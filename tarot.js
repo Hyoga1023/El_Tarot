@@ -427,7 +427,7 @@ async function pedirPreguntaUsuario() {
         }
       }
 
-      const interpretacionIA = await generarInterpretacionIA(seleccionadas);
+      const interpretacionIA = await generarInterpretacionIA(seleccionadas, preguntaUsuario);
       Swal.close();
       botonLanzar.style.display = 'none';
 
