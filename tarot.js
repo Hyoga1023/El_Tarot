@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
       interpretacionDiv.style.border = '2px solid var(--color4)';
 
       const tituloInterpretacion = document.createElement("h2");
-      tituloInterpretacion.textContent = "Mensaje del Tarot";
+      tituloInterpretacion.textContent = "Mensaje del Tarót";
       tituloInterpretacion.style.fontSize = '3rem';
       tituloInterpretacion.style.fontFamily = 'var(--font-Titulos)';
       tituloInterpretacion.style.color = 'var(--color4)';
