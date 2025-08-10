@@ -1,5 +1,5 @@
 Swal.fire({
-  title: 'Bienvenido al Tarot',
+  title: 'Bienvenido al Tarót',
   html: `
     <p style="font-size: 1.3rem; line-height: 1.6; color: var(--color3); font-family: var(--font-Parrafos2); font-style: italic;">
       Las cartas están listas para revelarte lo que el Universo guarda en silencio.<br>
