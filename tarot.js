@@ -119,11 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload();
       } else {
         // Ir al inicio
-        window.location.href = '/';
+        window.location.href = window.location.origin + window.location.pathname;
+
       }
     } else {
       // Si eligió cancelar o ir al inicio
-      window.location.href = '/';
+      window.location.href = window.location.origin + window.location.pathname;
+
     }
   };
 
@@ -442,7 +444,7 @@ async function pedirPreguntaUsuario() {
 
       seleccionadas.forEach((carta, i) => {
         const cartaDiv = document.createElement("div");
-        cartaDiv.classList.add("carta");
+        cartaDiv.classList.add("carta");window.location.href
 
         const img = document.createElement("img");
         img.src = reversoCarta;
