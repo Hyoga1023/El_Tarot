@@ -7,7 +7,6 @@ Swal.fire({
       ¿Estás listo para descubrir tu camino?
     </p>
   `,
-  background: 'var(--color6)',
   color: 'var(--color3)',
   confirmButtonText: 'Comenzar lectura',
   confirmButtonColor: 'var(--color4)',

@@ -95,6 +95,28 @@ body {
     filter: blur(12px);
   }
 }
+.tarot-popup {
+  background-image: url('img/madera_negra.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--color3); 
+  position: relative;
+  overflow: hidden;
+}
+
+.tarot-popup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+.tarot-popup > * {
+  position: relative;
+  z-index: 1; 
+}
 
 header {
   display: flex;
