@@ -115,24 +115,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (isConfirmed) {
-        // Continuar con nueva consulta - limpiar solo las cartas, no todo
-        const contenedorPrincipal = board.querySelector('div[style*="display: flex"]');
-        if (contenedorPrincipal) {
-          contenedorPrincipal.remove();
-        }
-        
-        // Asegurar que el botón lanzar esté visible
-        botonLanzar.style.display = 'block';
-        botonLanzar.style.visibility = 'visible';
-        cartasLanzadas = false;
-        preguntaUsuario = "";
+        // Continuar con nueva consulta
+        location.reload();
       } else {
         // Ir al inicio
-        window.location.href = 'https://hyoga1023.github.io/El_Tarot/';
+        window.location.href = '/';
       }
     } else {
       // Si eligió cancelar o ir al inicio
-      window.location.href = 'https://hyoga1023.github.io/El_Tarot/';
+      window.location.href = '/';
     }
   };
 
