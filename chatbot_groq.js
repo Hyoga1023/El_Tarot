@@ -68,14 +68,14 @@ Usa tono sabio pero directo. No divagues.`;
             messages: [
                 {
                     role: "system", 
-                    content: "Eres un tarotista sabio. Responde siempre en primera persona, de forma concisa y directa. Máximo 200 palabras por respuesta."
+                    content: "Eres un tarotista sabio. Responde siempre en primera persona, de forma concisa y directa. Máximo 250 palabras por respuesta."
                 },
                 {
                     role: "user", 
                     content: prompt
                 }
             ],
-            max_tokens: 250, // Reducido para respuestas más cortas
+            max_tokens: 300, // Reducido para respuestas más cortas
             temperature: 0.8 // Ligeramente menos creativo para más precisión
         };
 
