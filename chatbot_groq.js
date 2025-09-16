@@ -68,14 +68,14 @@ Usa tono sabio pero directo. No divagues.`;
             messages: [
                 {
                     role: "system", 
-                    content: "Eres un tarotista sabio. Responde siempre en primera persona, de forma concisa y directa. Máximo 250 palabras por respuesta."
+                    content: "Eres un tarotista sabio. Responde siempre en primera persona, de forma concisa y directa. Máximo 200 palabras por respuesta."
                 },
                 {
                     role: "user", 
                     content: prompt
                 }
             ],
-            max_tokens: 300, // Reducido para respuestas más cortas
+            max_tokens: 325, // Ajustado para respuestas más completas
             temperature: 0.8 // Ligeramente menos creativo para más precisión
         };
 
@@ -119,9 +119,8 @@ Usa tono sabio pero directo. No divagues.`;
             return "El oráculo respondió en silencio. Intenta de nuevo.";
         }
 
-        // Asegurar que la respuesta no sea demasiado larga
-        const respuestaLimpia = texto.trim();
-        return respuestaLimpia.length > 800 ? respuestaLimpia.substring(0, 800) + "..." : respuestaLimpia;
+        // Devolver la respuesta completa (el límite de tokens ya la controla)
+        return texto.trim();
 
     } catch (error) {
         console.error("Error en generarInterpretacionIA:", error);
