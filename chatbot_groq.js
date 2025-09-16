@@ -30,7 +30,7 @@ async function generarInterpretacionIA(cartas, pregunta) {
       return `${c.carta} (${estado})`;
     });
 
-    const prompt = `Eres un experto en el tarot y un maestro de la sabiduría arcana. La persona pregunta: "${pregunta}". Las cartas son: 1) ${nombresCartas[0]} (pasado / situación actual) 2) ${nombresCartas[1]} (desafíos) 3) ${nombresCartas[2]} (futuro / resultado) Proporciona una interpretación esotérica y profunda de esta tirada. Conecta las tres cartas en un relato coherente y significativo que responda a la pregunta del consultante. Evita lenguaje técnico, usa un tono sabio, misterioso y poético. No menciones que eres un programa.`;
+    const prompt = `Eres un experto en el tarot y un maestro de la sabiduría arcana. La persona pregunta: "${pregunta}". Las cartas son: 1) ${nombresCartas[0]} (pasado / situación actual) 2) ${nombresCartas[1]} (desafíos) 3) ${nombresCartas[2]} (futuro / resultado) Proporciona una interpretación esotérica y profunda de esta tirada. Conecta las tres cartas en un relato coherente y significativo que responda a la pregunta del consultante. Evita lenguaje técnico, usa un tono sabio, misterioso y poético. debes desarrollar y culminar la idea antes de 390 tokens`;
 
     const payload = {
       model: MODELO_IA,
