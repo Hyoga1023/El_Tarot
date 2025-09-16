@@ -1,80 +1,143 @@
-// chatbot_huggingface.js (o renómbralo a chatbot_groq.js para claridad)
-
-// ¡AQUÍ ESTÁ EL FIX! Define API_URL al inicio del archivo.
+// chatbot_groq.js - Versión mejorada para Cesar
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODELO_IA = "llama-3.1-8b-instant";  // Modelo actualizado y activo en Groq (rápido, context window grande)
+const MODELO_IA = "llama-3.1-8b-instant";
 
-// Comprobar o pedir la clave al cargar el script
-(function ensureGroqKey() {
-  let apiKey = localStorage.getItem("groq_api_key");
-  if (!apiKey) {
-    apiKey = prompt("Introduce tu API Key de Groq (solo se guardará una vez):");
-    if (apiKey && apiKey.trim()) {
-      localStorage.setItem("groq_api_key", apiKey.trim());
-      console.log("API Key guardada en localStorage.");
-    } else {
-      console.warn("No se ingresó ninguna clave, la app no funcionará.");
+// Fix #1: Función mejorada para garantizar que la API Key se guarde
+function ensureGroqKey() {
+    let apiKey = localStorage.getItem("groq_api_key");
+    
+    // Verificar si realmente existe y no está vacía
+    if (!apiKey || apiKey.trim() === "" || apiKey === "null" || apiKey === "undefined") {
+        console.log("API Key no encontrada o inválida. Solicitando nueva...");
+        
+        apiKey = prompt("Introduce tu API Key de Groq (solo se guardará una vez):");
+        
+        if (apiKey && apiKey.trim() && apiKey.trim() !== "") {
+            // Limpiar y guardar
+            const cleanKey = apiKey.trim();
+            localStorage.setItem("groq_api_key", cleanKey);
+            
+            // Verificar que se guardó correctamente
+            const savedKey = localStorage.getItem("groq_api_key");
+            if (savedKey === cleanKey) {
+                console.log("✅ API Key guardada correctamente en localStorage.");
+                return cleanKey;
+            } else {
+                console.error("❌ Error al guardar la API Key");
+                alert("Error al guardar la clave. Intenta de nuevo.");
+                return null;
+            }
+        } else {
+            console.warn("No se ingresó una clave válida.");
+            alert("Necesitas una API Key válida para usar el oráculo.");
+            return null;
+        }
     }
-  }
-})();
+    
+    console.log("✅ API Key encontrada en localStorage.");
+    return apiKey;
+}
+
+// Llamar la función al cargar
+ensureGroqKey();
 
 async function generarInterpretacionIA(cartas, pregunta) {
-  try {
-    const GROQ_API_KEY = localStorage.getItem("groq_api_key");
-    if (!GROQ_API_KEY) {
-      return "No hay conexión con el oráculo. Guarda tu API key de Groq en el LocalStorage.";
+    try {
+        // Verificar la API Key cada vez
+        const GROQ_API_KEY = ensureGroqKey();
+        
+        if (!GROQ_API_KEY) {
+            return "No hay conexión con el oráculo. Necesito tu API key de Groq para funcionar.";
+        }
+
+        const nombresCartas = cartas.map((c) => {
+            const estado = c.invertida ? "invertida" : "derecha";
+            return `${c.carta} (${estado})`;
+        });
+
+        // Fix #2: Prompt optimizado para respuestas cortas y en primera persona
+        const prompt = `Pregunta: "${pregunta}"
+Cartas: ${nombresCartas[0]} (pasado), ${nombresCartas[1]} (desafíos), ${nombresCartas[2]} (futuro)
+
+Como experto tarotista, dame UNA interpretación directa y concisa en PRIMERA PERSONA (usando "veo", "percibo", "siento"). 
+Máximo 200 palabras. Conecta las 3 cartas en un mensaje cohesivo y místico que responda la pregunta.
+Usa tono sabio pero directo. No divagues.`;
+
+        const payload = {
+            model: MODELO_IA,
+            messages: [
+                {
+                    role: "system", 
+                    content: "Eres un tarotista sabio. Responde siempre en primera persona, de forma concisa y directa. Máximo 200 palabras por respuesta."
+                },
+                {
+                    role: "user", 
+                    content: prompt
+                }
+            ],
+            max_tokens: 250, // Reducido para respuestas más cortas
+            temperature: 0.8 // Ligeramente menos creativo para más precisión
+        };
+
+        console.log(`Consultando el modelo: ${MODELO_IA}`);
+
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${GROQ_API_KEY}`
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            let errorData = {};
+            try {
+                errorData = await response.json();
+            } catch (e) {
+                console.error("Error al parsear respuesta:", e);
+            }
+            
+            console.error(`Error Groq API: ${response.status}`, errorData);
+            
+            // Manejo de errores más específico
+            if (response.status === 401) {
+                // API Key inválida, limpiar localStorage
+                localStorage.removeItem("groq_api_key");
+                return "API Key inválida. Se ha eliminado la clave guardada. Recarga la página e introduce una nueva.";
+            }
+            
+            return `Error en el oráculo (${response.status}). ${errorData.error?.message || 'Intenta de nuevo.'}`;
+        }
+
+        const data = await response.json();
+        console.log("Respuesta recibida:", data);
+
+        const texto = data?.choices?.[0]?.message?.content;
+        
+        if (!texto) {
+            return "El oráculo respondió en silencio. Intenta de nuevo.";
+        }
+
+        // Asegurar que la respuesta no sea demasiado larga
+        const respuestaLimpia = texto.trim();
+        return respuestaLimpia.length > 800 ? respuestaLimpia.substring(0, 800) + "..." : respuestaLimpia;
+
+    } catch (error) {
+        console.error("Error en generarInterpretacionIA:", error);
+        return "Algo falló en la consulta. Las estrellas están alineadas incorrectamente. 🔮";
     }
+}
 
-    const nombresCartas = cartas.map((c) => {
-      const estado = c.invertida ? "invertida" : "derecha";
-      return `${c.carta} (${estado})`;
-    });
+// Función para limpiar la API Key (útil para debugging)
+function limpiarApiKey() {
+    localStorage.removeItem("groq_api_key");
+    console.log("API Key eliminada. Recarga la página para introducir una nueva.");
+}
 
-    const prompt = `Eres un experto en el tarot y un maestro de la sabiduría arcana. La persona pregunta: "${pregunta}". Las cartas son: 1) ${nombresCartas[0]} (pasado / situación actual) 2) ${nombresCartas[1]} (desafíos) 3) ${nombresCartas[2]} (futuro / resultado) Proporciona una interpretación esotérica y profunda de esta tirada. Habla en primera persona. Conecta las tres cartas en un relato coherente y significativo que responda a la pregunta del consultante. Evita lenguaje técnico, usa un tono sabio, misterioso y poético. debes desarrollar y culminar la idea antes de 250 palabras`;
-
-    const payload = {
-      model: MODELO_IA,
-      messages: [
-        { role: "system", content: "Eres un guía esotérico y sabio." },
-        { role: "user", content: prompt }  // Usa el prompt real con las cartas y pregunta
-      ],
-      max_tokens: 400,
-      temperature: 0.9
-    };
-
-    console.log(`Consultando el modelo de Groq: ${MODELO_IA}`);
-    console.log("Payload enviado:", JSON.stringify(payload, null, 2));  // Para debugging
-
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${GROQ_API_KEY}`
-      },
-      body: JSON.stringify(payload)
-    });
-
-    if (!response.ok) {
-      let errorData = {};
-      try {
-        errorData = await response.json();
-      } catch (e) {
-        console.error("No se pudo parsear el error de la API:", e);
-      }
-      console.error(`Error en Groq API: ${response.status} -`, errorData);
-      if (errorData.error && typeof errorData.error === 'object') {
-        return `Error en la API: ${errorData.error.message || 'Solicitud inválida'}. Verifica el modelo o la clave API.`;
-      }
-      return "El oráculo está de huelga. Vuelve a intentarlo.";
-    }
-
-    const data = await response.json();
-    console.log("Respuesta de Groq:", data);
-
-    const texto = data?.choices?.[0]?.message?.content;
-    return texto ? texto.trim() : "El oráculo habló en silencio absoluto.";
-  } catch (error) {
-    console.error("Error al generar interpretación:", error);
-    return "Algo falló en la consulta al oráculo. Intenta de nuevo cuando las estrellas se alineen.";
-  }
+// Función para verificar la API Key actual
+function verificarApiKey() {
+    const key = localStorage.getItem("groq_api_key");
+    console.log("API Key actual:", key ? "***" + key.slice(-4) : "No encontrada");
+    return key;
 }
