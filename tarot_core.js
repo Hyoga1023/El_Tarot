@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const img = document.createElement("img");
                 img.src = reversoCarta;
-                img.style.width = '150px';
+                img.style.width = '230px';
                 img.style.borderRadius = '12px';
                 img.style.boxShadow = '0 8px 16px rgba(0,0,0,0.3)';
                 cartaDiv.appendChild(img);
@@ -264,13 +264,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // === INTERPRETACIÓN ===
             const interpretacionDiv = document.createElement("div");
             interpretacionDiv.style.cssText = `
-                max-width: 700px;
+                max-width: 850px;
                 text-align: center;
-                padding: 30px;
+                padding: 7px;
                 background: rgba(248, 244, 225, 0.1);
                 border: 2px solid var(--color4);
                 border-radius: 20px;
-                margin: 20px;
+                margin: 7px;
             `;
             interpretacionDiv.innerHTML = `
                 <h2 style="font-size: 3rem; color: var(--color4); font-family: var(--font-Titulos); margin-bottom: 20px;">
