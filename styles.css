@@ -218,6 +218,28 @@ footer p {
   text-align: center;
   color: var(--color4);
 }
+/* Contenedor que agrupa los botones de acción */
+.botones-tarot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Asegura que los botones tengan proporciones parecidas */
+.botones-tarot button {
+  padding: 14px 32px;
+  font-size: 1.4rem;
+  border-radius: 28px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
 
 /* Tablets y pantallas medianas (768px - 1024px) */
 @media screen and (max-width: 1024px) {
