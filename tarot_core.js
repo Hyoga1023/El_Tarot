@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             interpretacionDiv.style.cssText = `
                 max-width: 900px;
                 text-align: center;
-                padding: 2px;
+                padding: 5px;
                 background: rgba(248, 244, 225, 0.1);
                 border: 2px solid var(--color4);
                 border-radius: 20px;
