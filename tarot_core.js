@@ -264,13 +264,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // === INTERPRETACIÓN ===
             const interpretacionDiv = document.createElement("div");
             interpretacionDiv.style.cssText = `
-                max-width: 850px;
+                max-width: 900px;
                 text-align: center;
-                padding: 7px;
+                padding: 2px;
                 background: rgba(248, 244, 225, 0.1);
                 border: 2px solid var(--color4);
                 border-radius: 20px;
-                margin: 7px;
+                margin: 5px;
             `;
             interpretacionDiv.innerHTML = `
                 <h2 style="font-size: 3rem; color: var(--color4); font-family: var(--font-Titulos); margin-bottom: 20px;">
