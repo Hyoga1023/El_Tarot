@@ -32,8 +32,6 @@ function ensureGroqKey() {
 
         if (esValida) {
 
-            console.log("API Key encontrada en localStorage.");
-
             apiKeyEnMemoria = apiKey.trim();
 
             return apiKeyEnMemoria;
@@ -44,12 +42,9 @@ function ensureGroqKey() {
         console.warn("No se pudo acceder a localStorage:", error);
     }
 
-    // Intentar recuperar clave temporal
     if (apiKeyEnMemoria) {
         return apiKeyEnMemoria;
     }
-
-    console.log("Solicitando API Key de Groq...");
 
     const nuevaKey = prompt(
         "Introduce tu API Key de Groq:"
@@ -66,7 +61,6 @@ function ensureGroqKey() {
 
     apiKeyEnMemoria = claveLimpia;
 
-    // Intentar guardar permanentemente
     try {
 
         localStorage.setItem(
@@ -74,7 +68,6 @@ function ensureGroqKey() {
             claveLimpia
         );
 
-        // Verificar que realmente se guardó
         const claveGuardada =
             localStorage.getItem("groq_api_key");
 
@@ -84,17 +77,12 @@ function ensureGroqKey() {
 
         } else {
 
-            console.warn(
-                "No se pudo verificar el almacenamiento. Se utilizará la clave temporal."
-            );
+            console.warn("Se utilizará la clave temporal.");
         }
 
     } catch (error) {
 
-        console.warn(
-            "No se pudo guardar la API Key. Se utilizará temporalmente.",
-            error
-        );
+        console.warn("No se pudo guardar la API Key:", error);
     }
 
     return claveLimpia;
@@ -105,7 +93,7 @@ function ensureGroqKey() {
 // 2. LIMITAR EXTENSIÓN DE RESPUESTA
 // =========================================
 
-function limitarPalabras(texto, limite = 95) {
+function limitarPalabras(texto, limite = 180) {
 
     const palabras = texto.trim().split(/\s+/);
 
@@ -117,7 +105,6 @@ function limitarPalabras(texto, limite = 95) {
         .slice(0, limite)
         .join(" ");
 
-    // Intentar finalizar en una oración completa
     const ultimoPunto = Math.max(
         recorte.lastIndexOf("."),
         recorte.lastIndexOf("!"),
@@ -180,15 +167,18 @@ que responda directamente a la pregunta.
 
 REGLAS OBLIGATORIAS:
 
-- Máximo 95 palabras.
+- Escribe entre 130 y 170 palabras.
 - Habla siempre en primera persona como tarotista.
 - Utiliza expresiones como "veo", "percibo", "interpreto" y "siento".
 - Dirígete directamente al consultante utilizando "tú".
 - Nunca hables del tarotista en tercera persona.
 - No describas al consultante como si fuera otra persona.
-- Conecta las tres cartas en una interpretación coherente.
-- Utiliza un tono místico, cálido y profundo.
+- Explica el significado de cada carta y su relación con las demás.
+- Analiza cómo la situación actual influye en los desafíos y en el posible resultado.
+- Ofrece una reflexión significativa relacionada con la pregunta.
+- Utiliza un tono místico, cálido, profundo y natural.
 - Evita introducciones, saludos y conclusiones innecesarias.
+- No repitas ideas para completar la extensión.
 - Entrega únicamente la interpretación.
 `;
 
@@ -220,8 +210,14 @@ Te diriges directamente a quien consulta.
 
 Jamás hables de ti en tercera persona.
 
-Tus interpretaciones son breves, claras y significativas.
-Nunca superes las 95 palabras.
+Tus interpretaciones son profundas, claras y significativas.
+
+Escribe entre 130 y 170 palabras.
+Desarrolla el significado de las tres cartas.
+Conecta sus mensajes en una interpretación coherente.
+No repitas ideas ni utilices frases de relleno.
+
+Mantén siempre un tono místico, cálido y reflexivo.
 `
                 },
 
@@ -232,7 +228,7 @@ Nunca superes las 95 palabras.
 
             ],
 
-            max_completion_tokens: 220,
+            max_completion_tokens: 500,
 
             reasoning_effort: "low",
 
@@ -321,16 +317,19 @@ Nunca superes las 95 palabras.
             return "No recibí una interpretación. Intenta nuevamente.";
         }
 
-        // Limpiar y limitar respuesta
         const interpretacionFinal = limitarPalabras(
             texto.trim(),
-            95
+            180
         );
 
         // Guardar para sistema de voz
         ultimaInterpretacion = interpretacionFinal;
 
-        console.log("Interpretación generada correctamente.");
+        console.log(
+            "Interpretación generada:",
+            interpretacionFinal.split(/\s+/).length,
+            "palabras."
+        );
 
         return interpretacionFinal;
 
@@ -412,7 +411,6 @@ function crearBotonVoz() {
         return;
     }
 
-    // Crear contenedor
     let contenedor = botonLimpiar.parentElement;
 
     if (!contenedor.classList.contains("botones-tarot")) {
@@ -440,7 +438,6 @@ function crearBotonVoz() {
         contenedor = nuevoContenedor;
     }
 
-    // Crear botón
     const botonVoz = document.createElement("button");
 
     botonVoz.id = "boton-voz-tarot";
@@ -466,10 +463,6 @@ function crearBotonVoz() {
     `;
 
     let estado = "detenido";
-
-    // =========================================
-    // ACTUALIZAR ESTADO DEL BOTÓN
-    // =========================================
 
     function actualizarEstado(nuevoEstado) {
 
@@ -506,7 +499,6 @@ function crearBotonVoz() {
         }
     }
 
-    // Hover
     botonVoz.addEventListener("mouseenter", () => {
 
         if (estado === "detenido") {
@@ -519,10 +511,6 @@ function crearBotonVoz() {
 
         botonVoz.style.transform = "scale(1)";
     });
-
-    // =========================================
-    // EVENTO CLICK
-    // =========================================
 
     botonVoz.addEventListener("click", () => {
 
