@@ -4,6 +4,7 @@
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const botonLanzar = document.getElementById("lanzar");
     const board = document.getElementById("tarot-board");
     const rutaJSON = "data/tarot_completo.json";
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================
 
     const aplicarEstilosUnificados = (popup) => {
+
         popup.style.padding = "1.6rem";
         popup.style.backgroundImage = "url('img/madera_negra.png')";
         popup.style.backgroundSize = "cover";
@@ -25,18 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.style.overflow = "hidden";
 
         if (!popup.querySelector(".tarot-overlay")) {
+
             const overlay = document.createElement("div");
+
             overlay.className = "tarot-overlay";
+
             overlay.style.cssText = `
                 position: absolute;
                 inset: 0;
                 background: rgba(0, 0, 0, 0.5);
                 z-index: 0;
             `;
+
             popup.insertBefore(overlay, popup.firstChild);
         }
 
         popup.querySelectorAll("*:not(.tarot-overlay)").forEach(el => {
+
             el.style.position = "relative";
             el.style.zIndex = "1";
         });
@@ -44,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = popup.querySelector(".swal2-title");
 
         if (title) {
+
             title.style.fontSize = "1.8rem";
             title.style.fontWeight = "bold";
             title.style.fontFamily = "var(--font-Titulos)";
@@ -55,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const htmlContainer = popup.querySelector(".swal2-html-container");
 
         if (htmlContainer) {
+
             htmlContainer.style.fontSize = "1.1rem";
             htmlContainer.style.fontFamily = "var(--font-Parrafos2)";
             htmlContainer.style.fontStyle = "italic";
@@ -62,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         popup.querySelectorAll(".swal2-styled").forEach(btn => {
+
             btn.style.fontSize = "1.1rem";
             btn.style.padding = "12px 24px";
             btn.style.fontFamily = "var(--font-Titulos)";
@@ -72,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const confirmButton = popup.querySelector(".swal2-confirm");
 
         if (confirmButton) {
+
             confirmButton.style.background = "var(--color4)";
             confirmButton.style.color = "var(--color6)";
             confirmButton.style.border = "none";
@@ -80,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cancelButton = popup.querySelector(".swal2-cancel");
 
         if (cancelButton) {
+
             cancelButton.style.background = "#666";
             cancelButton.style.color = "var(--color3)";
             cancelButton.style.border = "none";
@@ -87,20 +99,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const configBase = {
+
         background: "transparent",
         color: "var(--color3)",
         allowOutsideClick: false,
         allowEscapeKey: false,
+
         customClass: {
+
             popup: "tarot-popup smoke-popup",
             title: "tarot-title",
             confirmButton: "tarot-button",
             cancelButton: "tarot-button"
         },
+
         showClass: { popup: "smoke-in" },
         hideClass: { popup: "smoke-out" },
+
         didOpen: aplicarEstilosUnificados
     };
+
 
     // =========================================
     // SOLICITAR PREGUNTA
@@ -109,29 +127,41 @@ document.addEventListener("DOMContentLoaded", () => {
     window.pedirPreguntaUsuario = async function () {
 
         const { value: pregunta } = await Swal.fire({
+
             ...configBase,
+
             title: "Antes de comenzar...",
+
             input: "text",
+
             inputLabel:
                 "Escribe tu pregunta o el área de interés (amor, trabajo, dinero, salud, etc.)",
+
             inputPlaceholder: "Ej: ¿Cómo me irá en el amor este año?",
+
             confirmButtonText: "Continuar",
+
             width: "600px",
 
             inputValidator: (value) => {
+
                 if (!value || !value.trim()) {
+
                     return "Debes escribir una pregunta o tema para continuar.";
                 }
             }
         });
 
         if (pregunta) {
+
             preguntaUsuario = pregunta.trim();
+
             return true;
         }
 
         return false;
     };
+
 
     // =========================================
     // LIMPIAR / NUEVA CONSULTA
@@ -140,19 +170,28 @@ document.addEventListener("DOMContentLoaded", () => {
     window.manejarLimpiar = async function () {
 
         const { isConfirmed } = await Swal.fire({
+
             ...configBase,
+
             title: "¿Qué deseas hacer?",
+
             html: "Puedes realizar una nueva consulta o regresar al inicio.",
+
             showCancelButton: true,
+
             confirmButtonText: "Nueva Consulta",
+
             cancelButtonText: "Ir al Inicio"
         });
 
         if (isConfirmed) {
 
             const confirmacion = await Swal.fire({
+
                 ...configBase,
+
                 title: "Consulta con sabiduría",
+
                 html: `
                     <p style="
                         font-size: 1.1rem;
@@ -168,14 +207,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         ¿Estás seguro de que deseas continuar?
                     </p>
                 `,
+
                 showCancelButton: true,
+
                 confirmButtonText: "Sí, continuar",
+
                 cancelButtonText: "Mejor no"
             });
 
             if (confirmacion.isConfirmed) {
+
                 location.reload();
+
             } else {
+
                 window.location.href =
                     "https://hyoga1023.github.io/El_Tarot/";
             }
@@ -187,6 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+
     // =========================================
     // CREAR BOTÓN LIMPIAR
     // =========================================
@@ -196,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = document.createElement("button");
 
         btn.id = "limpiar";
+
         btn.textContent = "Limpiar";
 
         btn.style.cssText = `
@@ -214,15 +261,18 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         btn.addEventListener("mouseenter", () => {
+
             btn.style.transform = "scale(1.05)";
         });
 
         btn.addEventListener("mouseleave", () => {
+
             btn.style.transform = "scale(1)";
         });
 
         return btn;
     };
+
 
     // =========================================
     // FUNCIÓN PRINCIPAL: LANZAR CARTAS
@@ -237,8 +287,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!preguntaOK) return;
 
             Swal.fire({
+
                 ...configBase,
+
                 title: "Consultando el oráculo...",
+
                 html: `
                     <p style="
                         font-size: 1.1rem;
@@ -249,23 +302,34 @@ document.addEventListener("DOMContentLoaded", () => {
                         Las cartas están siendo llamadas por el universo.
                     </p>
                 `,
+
                 didOpen: () => Swal.showLoading()
             });
 
-            // Cargar cartas
+
+            // =========================================
+            // CARGAR CARTAS
+            // =========================================
+
             const res = await fetch(rutaJSON);
 
             if (!res.ok) {
+
                 throw new Error("No se pudo cargar el archivo de cartas.");
             }
 
             const cartas = await res.json();
 
             if (!Array.isArray(cartas) || cartas.length < 3) {
+
                 throw new Error("El archivo de cartas no contiene suficientes cartas.");
             }
 
-            // Seleccionar tres cartas diferentes
+
+            // =========================================
+            // SELECCIONAR TRES CARTAS DIFERENTES
+            // =========================================
+
             const cartasDisponibles = [...cartas];
 
             const seleccionadas = [];
@@ -285,7 +349,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 seleccionadas.push(carta);
             }
 
-            // Solicitar interpretación
+
+            // =========================================
+            // SOLICITAR INTERPRETACIÓN
+            // =========================================
+
             const interpretacionIA =
                 await window.generarInterpretacionIA(
                     seleccionadas,
@@ -293,12 +361,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
             if (!interpretacionIA) {
+
                 throw new Error("No se recibió interpretación.");
             }
 
             Swal.close();
 
             botonLanzar.style.display = "none";
+
 
             // =========================================
             // CONTENEDOR PRINCIPAL
@@ -310,11 +380,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 20px;
+                gap: 25px;
                 padding: 20px;
                 width: 100%;
                 box-sizing: border-box;
             `;
+
 
             // =========================================
             // CARTAS
@@ -337,11 +408,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const cartaDiv = document.createElement("div");
 
                 cartaDiv.className = "carta";
+
                 cartaDiv.style.textAlign = "center";
 
                 const img = document.createElement("img");
 
                 img.src = reversoCarta;
+
                 img.alt = "Reverso de carta de tarot";
 
                 img.style.cssText = `
@@ -357,9 +430,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
 
                     img.src = `cartas/${carta.imagen}.png`;
+
                     img.alt = carta.carta;
 
                     if (carta.invertida) {
+
                         img.style.transform = "rotate(180deg)";
                     }
 
@@ -373,6 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         color: var(--color4);
                         font-family: var(--font-Titulos);
                         margin-top: 10px;
+                        font-size: 1.2rem;
                     `;
 
                     cartaDiv.appendChild(titulo);
@@ -384,6 +460,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             contenedorPrincipal.appendChild(contenedorCartas);
 
+
             // =========================================
             // INTERPRETACIÓN DE LA IA
             // =========================================
@@ -392,15 +469,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             interpretacionDiv.style.cssText = `
                 width: 100%;
-                max-width: 900px;
+                max-width: 950px;
                 box-sizing: border-box;
-                text-align: center;
-                padding: 20px;
+                text-align: left;
+                padding: 28px;
                 background: rgba(248, 244, 225, 0.1);
                 border: 2px solid var(--color4);
                 border-radius: 20px;
-                margin: 5px;
-                overflow: hidden;
+                margin: 5px 0;
+                overflow: visible;
             `;
 
             const tituloInterpretacion = document.createElement("h2");
@@ -411,7 +488,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 font-size: clamp(1.8rem, 4vw, 3rem);
                 color: var(--color4);
                 font-family: var(--font-Titulos);
-                margin-bottom: 20px;
+                text-align: center;
+                margin: 0 0 25px 0;
             `;
 
             const textoInterpretacion = document.createElement("p");
@@ -419,30 +497,38 @@ document.addEventListener("DOMContentLoaded", () => {
             textoInterpretacion.textContent = interpretacionIA;
 
             textoInterpretacion.style.cssText = `
-                font-size: clamp(1rem, 2vw, 1.5rem);
+                font-size: clamp(19px, 2vw, 21px);
                 color: var(--color3);
                 font-family: var(--font-Parrafos);
-                line-height: 1.7;
+                line-height: 1.8;
+                text-align: justify;
                 white-space: pre-wrap;
-                overflow-wrap: anywhere;
+                overflow-wrap: break-word;
                 word-break: normal;
                 margin: 0;
+                width: 100%;
                 max-width: 100%;
             `;
 
             interpretacionDiv.appendChild(tituloInterpretacion);
+
             interpretacionDiv.appendChild(textoInterpretacion);
+
 
             // =========================================
             // AGREGAR AL BOARD
             // =========================================
 
             board.innerHTML = "";
+
             board.appendChild(contenedorPrincipal);
 
             setTimeout(() => {
+
                 contenedorPrincipal.appendChild(interpretacionDiv);
+
             }, 3500);
+
 
             // =========================================
             // BOTONES LIMPIAR Y VOZ
@@ -468,6 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (
                             typeof window.mostrarBotonVozTarot === "function"
                         ) {
+
                             window.mostrarBotonVozTarot();
                         }
 
@@ -476,24 +563,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }, 5000);
 
+
         } catch (err) {
 
             console.error("Error en lanzarCartas:", err);
 
             Swal.fire({
+
                 ...configBase,
+
                 title: "Error Místico",
+
                 text: err.message || "El oráculo no pudo responder. Intenta de nuevo.",
+
                 icon: "error"
             });
         }
     };
+
 
     // =========================================
     // EVENTO BOTÓN LANZAR
     // =========================================
 
     if (botonLanzar) {
+
         botonLanzar.addEventListener(
             "click",
             window.lanzarCartas
