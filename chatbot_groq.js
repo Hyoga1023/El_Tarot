@@ -1,352 +1,730 @@
+
 // =========================================
-// chatbot_groq.js - Versión final con voz integrada (REFACORIZADA)
+// chatbot_groq.js - Versión optimizada
+// Groq + Tarot + Sistema de voz
 // =========================================
 
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODELO_IA = "llama-3.1-8b-instant";
+const MODELO_IA = "openai/gpt-oss-20b";
 
-// Variable para guardar la última interpretación
-let ultimaInterpretacion = '';
+// Última interpretación para el sistema de voz
+let ultimaInterpretacion = "";
 
-// ==========================
+// Respaldo temporal de API Key
+let apiKeyEnMemoria = null;
+
+
+// =========================================
 // 1. GESTIÓN DE API KEY
-// ==========================
+// =========================================
 
 function ensureGroqKey() {
-  let apiKey = localStorage.getItem("groq_api_key");
 
-  const esValida = apiKey && 
-                   apiKey.trim() !== "" && 
-                   apiKey !== "null" && 
-                   apiKey !== "undefined" && 
-                   apiKey !== null;
+    try {
 
-  if (esValida) {
-    console.log("API Key válida encontrada en localStorage.");
-    return apiKey.trim();
-  }
+        let apiKey = localStorage.getItem("groq_api_key");
 
-  console.log("API Key no encontrada o inválida. Solicitando...");
+        const esValida =
+            apiKey &&
+            apiKey.trim() !== "" &&
+            apiKey !== "null" &&
+            apiKey !== "undefined";
 
-  const nuevaKey = prompt("Introduce tu API Key de Groq (se guardará localmente):");
+        if (esValida) {
 
-  if (nuevaKey && nuevaKey.trim() !== "") {
+            console.log("API Key encontrada en localStorage.");
+
+            apiKeyEnMemoria = apiKey.trim();
+
+            return apiKeyEnMemoria;
+        }
+
+    } catch (error) {
+
+        console.warn("No se pudo acceder a localStorage:", error);
+    }
+
+    // Intentar recuperar clave temporal
+    if (apiKeyEnMemoria) {
+        return apiKeyEnMemoria;
+    }
+
+    console.log("Solicitando API Key de Groq...");
+
+    const nuevaKey = prompt(
+        "Introduce tu API Key de Groq:"
+    );
+
+    if (!nuevaKey || !nuevaKey.trim()) {
+
+        alert("Debes ingresar una API Key para utilizar el oráculo.");
+
+        return null;
+    }
+
     const claveLimpia = nuevaKey.trim();
-    localStorage.setItem("groq_api_key", claveLimpia);
-    console.log("API Key guardada correctamente.");
+
+    apiKeyEnMemoria = claveLimpia;
+
+    // Intentar guardar permanentemente
+    try {
+
+        localStorage.setItem(
+            "groq_api_key",
+            claveLimpia
+        );
+
+        // Verificar que realmente se guardó
+        const claveGuardada =
+            localStorage.getItem("groq_api_key");
+
+        if (claveGuardada === claveLimpia) {
+
+            console.log("API Key guardada correctamente.");
+
+        } else {
+
+            console.warn(
+                "No se pudo verificar el almacenamiento. Se utilizará la clave temporal."
+            );
+        }
+
+    } catch (error) {
+
+        console.warn(
+            "No se pudo guardar la API Key. Se utilizará temporalmente.",
+            error
+        );
+    }
+
     return claveLimpia;
-  } else {
-    alert("Debes ingresar una API Key válida para usar el oráculo.");
-    return null;
-  }
 }
 
-// ==========================
-// 2. FUNCIÓN PRINCIPAL DE IA
-// ==========================
+
+// =========================================
+// 2. LIMITAR EXTENSIÓN DE RESPUESTA
+// =========================================
+
+function limitarPalabras(texto, limite = 95) {
+
+    const palabras = texto.trim().split(/\s+/);
+
+    if (palabras.length <= limite) {
+        return texto.trim();
+    }
+
+    const recorte = palabras
+        .slice(0, limite)
+        .join(" ");
+
+    // Intentar finalizar en una oración completa
+    const ultimoPunto = Math.max(
+        recorte.lastIndexOf("."),
+        recorte.lastIndexOf("!"),
+        recorte.lastIndexOf("?")
+    );
+
+    if (ultimoPunto > recorte.length * 0.65) {
+        return recorte.substring(0, ultimoPunto + 1);
+    }
+
+    return recorte.replace(/[,:;]$/, "") + "…";
+}
+
+
+// =========================================
+// 3. FUNCIÓN PRINCIPAL DE IA
+// =========================================
 
 async function generarInterpretacionIA(cartas, pregunta) {
-  try {
-    const GROQ_API_KEY = ensureGroqKey();
 
-    if (!GROQ_API_KEY) {
-      return "No hay conexión con el oráculo. Necesito tu API key de Groq para funcionar.";
+    try {
+
+        const GROQ_API_KEY = ensureGroqKey();
+
+        if (!GROQ_API_KEY) {
+
+            return "No puedo consultar el oráculo sin una API Key de Groq.";
+        }
+
+        if (!Array.isArray(cartas) || cartas.length !== 3) {
+
+            throw new Error("La tirada debe contener exactamente tres cartas.");
+        }
+
+        const nombresCartas = cartas.map((c) => {
+
+            const estado = c.invertida
+                ? "invertida"
+                : "derecha";
+
+            return `${c.carta} (${estado})`;
+
+        });
+
+        // =========================================
+        // PROMPT DE INTERPRETACIÓN
+        // =========================================
+
+        const prompt = `
+Pregunta del consultante: "${pregunta}"
+
+Cartas seleccionadas:
+
+1. ${nombresCartas[0]}: pasado o situación actual.
+2. ${nombresCartas[1]}: desafíos.
+3. ${nombresCartas[2]}: futuro o resultado.
+
+Interpreta las tres cartas como un único mensaje coherente
+que responda directamente a la pregunta.
+
+REGLAS OBLIGATORIAS:
+
+- Máximo 95 palabras.
+- Habla siempre en primera persona como tarotista.
+- Utiliza expresiones como "veo", "percibo", "interpreto" y "siento".
+- Dirígete directamente al consultante utilizando "tú".
+- Nunca hables del tarotista en tercera persona.
+- No describas al consultante como si fuera otra persona.
+- Conecta las tres cartas en una interpretación coherente.
+- Utiliza un tono místico, cálido y profundo.
+- Evita introducciones, saludos y conclusiones innecesarias.
+- Entrega únicamente la interpretación.
+`;
+
+        // =========================================
+        // CONFIGURACIÓN DE GROQ
+        // =========================================
+
+        const payload = {
+
+            model: MODELO_IA,
+
+            messages: [
+
+                {
+                    role: "system",
+
+                    content: `
+Eres un intérprete profesional de tarot.
+
+Tu comunicación es directa, personal y cercana.
+
+Hablas en primera persona singular.
+Tu voz utiliza expresiones como:
+"Veo en estas cartas..."
+"Percibo una energía..."
+"Interpreto esta combinación..."
+
+Te diriges directamente a quien consulta.
+
+Jamás hables de ti en tercera persona.
+
+Tus interpretaciones son breves, claras y significativas.
+Nunca superes las 95 palabras.
+`
+                },
+
+                {
+                    role: "user",
+                    content: prompt
+                }
+
+            ],
+
+            max_completion_tokens: 220,
+
+            reasoning_effort: "low",
+
+            reasoning_format: "hidden",
+
+            temperature: 0.6
+        };
+
+        console.log("Consultando modelo:", MODELO_IA);
+
+        // =========================================
+        // SOLICITUD API
+        // =========================================
+
+        const response = await fetch(API_URL, {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json",
+
+                Authorization: `Bearer ${GROQ_API_KEY}`
+
+            },
+
+            body: JSON.stringify(payload)
+
+        });
+
+        // =========================================
+        // MANEJO DE ERRORES
+        // =========================================
+
+        if (!response.ok) {
+
+            let errorData = {};
+
+            try {
+
+                errorData = await response.json();
+
+            } catch (error) {
+
+                console.error("No se pudo leer el error de Groq.");
+            }
+
+            const mensajeError =
+                errorData.error?.message || "Error desconocido.";
+
+            console.error(
+                `Error Groq API: ${response.status}`,
+                mensajeError
+            );
+
+            if (response.status === 401) {
+
+                limpiarApiKey();
+
+                return "Tu API Key no es válida. Recarga la página e introduce una nueva.";
+            }
+
+            if (response.status === 404) {
+
+                return "El modelo de IA no está disponible para tu cuenta de Groq.";
+            }
+
+            if (response.status === 429) {
+
+                return "Has alcanzado el límite de consultas de Groq. Inténtalo más tarde.";
+            }
+
+            return `Error en el oráculo (${response.status}). ${mensajeError}`;
+        }
+
+        // =========================================
+        // PROCESAR RESPUESTA
+        // =========================================
+
+        const data = await response.json();
+
+        const texto = data?.choices?.[0]?.message?.content;
+
+        if (!texto || !texto.trim()) {
+
+            return "No recibí una interpretación. Intenta nuevamente.";
+        }
+
+        // Limpiar y limitar respuesta
+        const interpretacionFinal = limitarPalabras(
+            texto.trim(),
+            95
+        );
+
+        // Guardar para sistema de voz
+        ultimaInterpretacion = interpretacionFinal;
+
+        console.log("Interpretación generada correctamente.");
+
+        return interpretacionFinal;
+
+    } catch (error) {
+
+        console.error(
+            "Error en generarInterpretacionIA:",
+            error
+        );
+
+        return "No pude completar la consulta al oráculo. Intenta nuevamente.";
     }
-
-    const nombresCartas = cartas.map((c) => {
-      const estado = c.invertida ? "invertida" : "derecha";
-      return `${c.carta} (${estado})`;
-    });
-
-    const prompt = `Pregunta: "${pregunta}"
-Cartas: ${nombresCartas[0]} (pasado), ${nombresCartas[1]} (desafíos), ${nombresCartas[2]} (futuro)
-
-Como experto tarotista, dame UNA interpretación directa y concisa en SEGUNDA PERSONA (usando "veo", "percibo", "siento"). 
-Máximo 250 palabras. Conecta las 3 cartas en un mensaje cohesivo y místico que responda la pregunta.
-Usa tono sabio pero directo. No divagues.`;
-
-    const payload = {
-      model: MODELO_IA,
-      messages: [
-        {
-          role: "system",
-          content: "Eres un tarotista sabio. Responde siempre en segunda persona, de forma concisa y directa. Máximo 250 palabras por respuesta.",
-        },
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      max_tokens: 325,
-      temperature: 0.8,
-    };
-
-    console.log(`Consultando el modelo: ${MODELO_IA}`);
-
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${GROQ_API_KEY}`,
-      },
-      body: JSON.stringify(payload),
-    });
-
-    if (!response.ok) {
-      let errorData = {};
-      try {
-        errorData = await response.json();
-      } catch (e) {
-        console.error("Error al parsear respuesta:", e);
-      }
-
-      console.error(`Error Groq API: ${response.status}`, errorData);
-
-      if (response.status === 401) {
-        localStorage.removeItem("groq_api_key");
-        return "API Key inválida. Se ha eliminado la clave guardada. Recarga la página e introduce una nueva.";
-      }
-
-      return `Error en el oráculo (${response.status}). ${errorData.error?.message || "Intenta de nuevo."}`;
-    }
-
-    const data = await response.json();
-    const texto = data?.choices?.[0]?.message?.content;
-
-    if (!texto) {
-      return "El oráculo respondió en silencio. Intenta de nuevo.";
-    }
-
-    // Guardar para voz
-    ultimaInterpretacion = texto.trim();
-    console.log('Interpretación guardada para lectura de voz');
-
-    return texto.trim();
-
-  } catch (error) {
-    console.error("Error en generarInterpretacionIA:", error);
-    return "Algo falló en la consulta. Las estrellas están alineadas incorrectamente.";
-  }
 }
 
-// ==========================
-// 3. FUNCIONES AUXILIARES DE API KEY
-// ==========================
+
+// =========================================
+// 4. FUNCIONES AUXILIARES API KEY
+// =========================================
 
 function limpiarApiKey() {
-  localStorage.removeItem("groq_api_key");
-  console.log("API Key eliminada. Recarga la página para introducir una nueva.");
+
+    try {
+
+        localStorage.removeItem("groq_api_key");
+
+    } catch (error) {
+
+        console.warn("No se pudo limpiar localStorage.");
+    }
+
+    apiKeyEnMemoria = null;
+
+    console.log("API Key eliminada.");
 }
+
 
 function verificarApiKey() {
-  const key = localStorage.getItem("groq_api_key");
-  console.log("API Key actual:", key ? "***" + key.slice(-4) : "No encontrada");
-  return key;
+
+    let key = null;
+
+    try {
+
+        key = localStorage.getItem("groq_api_key");
+
+    } catch (error) {
+
+        console.warn("No se pudo acceder a localStorage.");
+    }
+
+    key = key || apiKeyEnMemoria;
+
+    console.log(
+        "API Key:",
+        key ? "***" + key.slice(-4) : "No encontrada"
+    );
+
+    return Boolean(key);
 }
 
-// ==========================
-// 4. CREAR EL BOTÓN DE VOZ (SOLO CUANDO EXISTA #limpiar)
-// ==========================
+
+// =========================================
+// 5. CREAR BOTÓN DE VOZ
+// =========================================
 
 function crearBotonVoz() {
-  if (document.getElementById('boton-voz-tarot')) {
-    return;
-  }
 
-  const botonLimpiar = document.getElementById('limpiar');
-  if (!botonLimpiar) {
-    console.warn('Botón "Limpiar" no encontrado. Reintentando...');
-    setTimeout(crearBotonVoz, 500);
-    return;
-  }
+    if (document.getElementById("boton-voz-tarot")) {
+        return;
+    }
 
-  // Crear contenedor flex si no existe
-  let contenedor = botonLimpiar.parentElement;
-  if (!contenedor.classList.contains('botones-tarot')) {
-    const nuevoContenedor = document.createElement('div');
-    nuevoContenedor.className = 'botones-tarot';
-    nuevoContenedor.style.cssText = `
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      flex-wrap: wrap;
+    const botonLimpiar = document.getElementById("limpiar");
+
+    if (!botonLimpiar) {
+
+        console.warn("Esperando botón Limpiar...");
+
+        setTimeout(crearBotonVoz, 500);
+
+        return;
+    }
+
+    // Crear contenedor
+    let contenedor = botonLimpiar.parentElement;
+
+    if (!contenedor.classList.contains("botones-tarot")) {
+
+        const nuevoContenedor = document.createElement("div");
+
+        nuevoContenedor.className = "botones-tarot";
+
+        nuevoContenedor.style.cssText = `
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        `;
+
+        botonLimpiar.parentNode.insertBefore(
+            nuevoContenedor,
+            botonLimpiar
+        );
+
+        nuevoContenedor.appendChild(botonLimpiar);
+
+        contenedor = nuevoContenedor;
+    }
+
+    // Crear botón
+    const botonVoz = document.createElement("button");
+
+    botonVoz.id = "boton-voz-tarot";
+
+    botonVoz.textContent = "Escuchar lectura";
+
+    botonVoz.style.cssText = `
+        display: none;
+        padding: 18px 48px;
+        border: none;
+        border-radius: 32px;
+        background: linear-gradient(90deg, var(--color4), var(--color5));
+        color: var(--color2);
+        font-size: 2rem;
+        font-family: var(--font-Titulos);
+        font-weight: bold;
+        letter-spacing: 2px;
+        box-shadow: 0 4px 24px var(--color6);
+        cursor: pointer;
+        transition: all 0.4s;
+        min-width: 280px;
+        max-width: 100%;
     `;
-    botonLimpiar.parentNode.insertBefore(nuevoContenedor, botonLimpiar);
-    nuevoContenedor.appendChild(botonLimpiar);
-    contenedor = nuevoContenedor;
-  }
 
-  // Crear botón de voz
-  const botonVoz = document.createElement('button');
-  botonVoz.id = 'boton-voz-tarot';
-  botonVoz.innerHTML = 'Escuchar lectura';
-  botonVoz.style.cssText = `
-    display: none;
-    padding: 18px 48px;
-    border: none;
-    border-radius: 32px;
-    background: linear-gradient(90deg, var(--color4) 0%, var(--color5) 100%);
-    color: var(--color2);
-    font-size: 2rem;
-    font-family: var(--font-Titulos);
-    font-weight: bold;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 24px var(--color6), 0 2px 8px var(--color1);
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(.4,2,.6,1);
-    min-width: 280px;
-  `;
+    let estado = "detenido";
 
-  let estado = 'detenido';
+    // =========================================
+    // ACTUALIZAR ESTADO DEL BOTÓN
+    // =========================================
 
-  function actualizarEstado(nuevoEstado) {
-    estado = nuevoEstado;
-    switch (estado) {
-      case 'reproduciendo':
-        botonVoz.innerHTML = 'Pausar lectura';
-        botonVoz.style.background = 'linear-gradient(90deg, var(--color5) 0%, var(--color6) 100%)';
-        break;
-      case 'pausado':
-        botonVoz.innerHTML = 'Continuar lectura';
-        botonVoz.style.background = 'linear-gradient(90deg, var(--color4) 0%, var(--color5) 100%)';
-        break;
-      default:
-        botonVoz.innerHTML = 'Escuchar lectura';
-        botonVoz.style.background = 'linear-gradient(90deg, var(--color4) 0%, var(--color5) 100%)';
-        break;
-    }
-  }
+    function actualizarEstado(nuevoEstado) {
 
-  // Hover
-  botonVoz.addEventListener('mouseenter', () => {
-    if (estado === 'detenido') {
-      botonVoz.style.transform = 'scale(1.07)';
-      botonVoz.style.boxShadow = '0 8px 32px var(--color4), 0 4px 16px var(--color6)';
-    }
-  });
+        estado = nuevoEstado;
 
-  botonVoz.addEventListener('mouseleave', () => {
-    botonVoz.style.transform = 'scale(1)';
-    botonVoz.style.boxShadow = '0 4px 24px var(--color6), 0 2px 8px var(--color1)';
-  });
+        switch (estado) {
 
-  // Click
-  botonVoz.addEventListener('click', () => {
-    if (!ultimaInterpretacion) {
-      alert('No hay ninguna lectura para reproducir. Lanza las cartas primero.');
-      return;
+            case "reproduciendo":
+
+                botonVoz.textContent = "Pausar lectura";
+
+                botonVoz.style.background =
+                    "linear-gradient(90deg, var(--color5), var(--color6))";
+
+                break;
+
+            case "pausado":
+
+                botonVoz.textContent = "Continuar lectura";
+
+                botonVoz.style.background =
+                    "linear-gradient(90deg, var(--color4), var(--color5))";
+
+                break;
+
+            default:
+
+                botonVoz.textContent = "Escuchar lectura";
+
+                botonVoz.style.background =
+                    "linear-gradient(90deg, var(--color4), var(--color5))";
+
+                break;
+        }
     }
 
-    if (estado === 'reproduciendo') {
-      window.speechSynthesis.pause();
-      actualizarEstado('pausado');
-    } else if (estado === 'pausado') {
-      window.speechSynthesis.resume();
-      actualizarEstado('reproduciendo');
-    } else {
-      leerInterpretacion(ultimaInterpretacion, actualizarEstado);
-    }
-  });
+    // Hover
+    botonVoz.addEventListener("mouseenter", () => {
 
-  // Insertar al lado de Limpiar
-  contenedor.appendChild(botonVoz);
-  console.log('Botón de voz creado junto a "Limpiar"');
+        if (estado === "detenido") {
+
+            botonVoz.style.transform = "scale(1.05)";
+        }
+    });
+
+    botonVoz.addEventListener("mouseleave", () => {
+
+        botonVoz.style.transform = "scale(1)";
+    });
+
+    // =========================================
+    // EVENTO CLICK
+    // =========================================
+
+    botonVoz.addEventListener("click", () => {
+
+        if (!ultimaInterpretacion) {
+
+            alert("No hay ninguna lectura para reproducir.");
+
+            return;
+        }
+
+        if (!("speechSynthesis" in window)) {
+
+            alert("Tu navegador no admite lectura de voz.");
+
+            return;
+        }
+
+        if (estado === "reproduciendo") {
+
+            window.speechSynthesis.pause();
+
+            actualizarEstado("pausado");
+
+        } else if (estado === "pausado") {
+
+            window.speechSynthesis.resume();
+
+            actualizarEstado("reproduciendo");
+
+        } else {
+
+            leerInterpretacion(
+                ultimaInterpretacion,
+                actualizarEstado
+            );
+        }
+    });
+
+    contenedor.appendChild(botonVoz);
+
+    console.log("Botón de voz creado correctamente.");
 }
 
-// ==========================
-// 5. FUNCIÓN DE LECTURA DE VOZ
-// ==========================
+
+// =========================================
+// 6. FUNCIÓN DE LECTURA DE VOZ
+// =========================================
 
 function leerInterpretacion(texto, callback) {
-  if (window.speechSynthesis.speaking) {
-    window.speechSynthesis.cancel();
-  }
 
-  const textoLimpio = texto
-    .replace(/[🔮✨🌙⭐💫🌟]/g, '')
-    .replace(/\*\*/g, '')
-    .replace(/\n\n+/g, '. ')
-    .trim();
+    if (!("speechSynthesis" in window)) {
+        return;
+    }
 
-  const utterance = new SpeechSynthesisUtterance(textoLimpio);
+    if (window.speechSynthesis.speaking) {
 
-  const voices = window.speechSynthesis.getVoices();
-  const vozEspanol = voices.find(v => 
-    v.lang.includes('es') && (v.name.includes('Microsoft') || v.name.includes('Google'))
-  ) || voices.find(v => v.lang.includes('es')) || voices[0];
+        window.speechSynthesis.cancel();
+    }
 
-  if (vozEspanol) utterance.voice = vozEspanol;
+    const textoLimpio = texto
 
-  utterance.rate = 0.9;
-  utterance.pitch = 1;
-  utterance.volume = 1;
-  utterance.lang = 'es-ES';
+        .replace(/[🔮✨🌙⭐💫🌟]/g, "")
 
-  utterance.onstart = () => callback('reproduciendo');
-  utterance.onend = () => callback('detenido');
-  utterance.onerror = () => callback('detenido');
-  utterance.onpause = () => console.log('Lectura pausada');
-  utterance.onresume = () => console.log('Lectura reanudada');
+        .replace(/\*\*/g, "")
 
-  window.speechSynthesis.speak(utterance);
+        .replace(/\n\n+/g, ". ")
+
+        .trim();
+
+    const utterance = new SpeechSynthesisUtterance(
+        textoLimpio
+    );
+
+    const voices = window.speechSynthesis.getVoices();
+
+    const vozEspanol = voices.find(v =>
+        v.lang.toLowerCase().startsWith("es") &&
+        (
+            v.name.includes("Microsoft") ||
+            v.name.includes("Google")
+        )
+    ) || voices.find(v =>
+        v.lang.toLowerCase().startsWith("es")
+    );
+
+    if (vozEspanol) {
+
+        utterance.voice = vozEspanol;
+    }
+
+    utterance.rate = 0.9;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    utterance.lang = "es-ES";
+
+    utterance.onstart = () => {
+        callback("reproduciendo");
+    };
+
+    utterance.onend = () => {
+        callback("detenido");
+    };
+
+    utterance.onerror = () => {
+        callback("detenido");
+    };
+
+    window.speechSynthesis.speak(utterance);
 }
 
-// ==========================
-// 6. MOSTRAR/OCULTAR BOTÓN
-// ==========================
+
+// =========================================
+// 7. MOSTRAR / OCULTAR BOTÓN
+// =========================================
 
 function mostrarBotonVoz() {
-  const boton = document.getElementById('boton-voz-tarot');
-  if (boton) {
-    boton.style.display = 'block';
-    console.log('Botón de voz visible');
-  }
+
+    const boton = document.getElementById(
+        "boton-voz-tarot"
+    );
+
+    if (boton) {
+
+        boton.style.display = "block";
+
+        console.log("Botón de voz visible.");
+    }
 }
+
 
 function ocultarBotonVoz() {
-  const boton = document.getElementById('boton-voz-tarot');
-  if (boton) {
-    boton.style.display = 'none';
-    if (window.speechSynthesis.speaking) {
-      window.speechSynthesis.cancel();
+
+    const boton = document.getElementById(
+        "boton-voz-tarot"
+    );
+
+    if (boton) {
+
+        boton.style.display = "none";
     }
-  }
+
+    if (
+        "speechSynthesis" in window &&
+        window.speechSynthesis.speaking
+    ) {
+
+        window.speechSynthesis.cancel();
+    }
 }
 
-// ==========================
-// 7. DETECTAR NUEVA LECTURA
-// ==========================
 
-document.addEventListener('click', (e) => {
-  if (e.target && e.target.id === 'lanzar') {
-    ocultarBotonVoz();
-    ultimaInterpretacion = '';
-    console.log('Nueva lectura iniciada, botón oculto');
-  }
+// =========================================
+// 8. DETECTAR NUEVA LECTURA
+// =========================================
+
+document.addEventListener("click", (e) => {
+
+    if (e.target && e.target.closest("#lanzar")) {
+
+        ocultarBotonVoz();
+
+        ultimaInterpretacion = "";
+
+        console.log("Nueva lectura iniciada.");
+    }
 });
 
-// ==========================
-// 8. FUNCIONES PÚBLICAS
-// ==========================
+
+// =========================================
+// 9. FUNCIONES PÚBLICAS
+// =========================================
 
 window.generarInterpretacionIA = generarInterpretacionIA;
+
 window.crearBotonVoz = crearBotonVoz;
+
 window.mostrarBotonVozTarot = mostrarBotonVoz;
+
 window.ocultarBotonVozTarot = ocultarBotonVoz;
+
 window.limpiarApiKey = limpiarApiKey;
+
 window.verificarApiKey = verificarApiKey;
 
-// ==========================
-// INICIALIZACIÓN
-// ==========================
 
-window.speechSynthesis.onvoiceschanged = () => {
-  console.log('Voces cargadas:', window.speechSynthesis.getVoices().length);
-};
+// =========================================
+// 10. INICIALIZACIÓN DEL SISTEMA DE VOZ
+// =========================================
 
-console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-console.log('SISTEMA DE VOZ INTEGRADO - ACTIVADO');
-console.log('Botón aparecerá junto a "Limpiar"');
-console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+if ("speechSynthesis" in window) {
+
+    window.speechSynthesis.onvoiceschanged = () => {
+
+        console.log(
+            "Voces disponibles:",
+            window.speechSynthesis.getVoices().length
+        );
+    };
+}
+
+console.log("----------------------------------------");
+console.log("SISTEMA DE TAROT CON IA ACTIVADO");
+console.log("Modelo:", MODELO_IA);
+console.log("Sistema de voz integrado.");
+console.log("----------------------------------------");
