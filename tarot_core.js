@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tituloInterpretacion.textContent = "Mensaje del Tarot";
 
             tituloInterpretacion.style.cssText = `
-                font-size: clamp(2rem, 4vw, 3rem);
+                font-size: clamp(2.5rem, 4vw, 3rem);
                 color: var(--color4);
                 font-family: var(--font-Titulos);
                 text-align: center;
