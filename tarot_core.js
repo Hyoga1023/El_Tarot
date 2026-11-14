@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
             textoInterpretacion.textContent = interpretacionIA;
 
             textoInterpretacion.style.cssText = `
-                font-size: clamp(19px, 2vw, 21px);
+                font-size: clamp(26px, 3vw, 32px);
                 color: var(--color3);
                 font-family: var(--font-Parrafos);
                 line-height: 1.8;

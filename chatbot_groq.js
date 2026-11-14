@@ -13,7 +13,7 @@ let ultimaInterpretacion = "";
 // LIMITAR EXTENSIÓN DE RESPUESTA
 // =========================================
 
-function limitarPalabras(texto, limite = 180) {
+function limitarPalabras(texto, limite = 250) {
 
     const palabras = texto.trim().split(/\s+/);
 
@@ -113,7 +113,7 @@ async function generarInterpretacionIA(cartas, pregunta) {
             return "No recibí una interpretación. Intenta nuevamente.";
         }
 
-        const interpretacionFinal = limitarPalabras(texto.trim(), 180);
+        const interpretacionFinal = limitarPalabras(texto.trim(), 250);
 
         // Guardar para sistema de voz
         ultimaInterpretacion = interpretacionFinal;
