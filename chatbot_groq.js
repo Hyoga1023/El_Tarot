@@ -1,6 +1,6 @@
-
 // =========================================
-// chatbot_groq.js - IA vía backend en Render
+// chatbot_groq.js
+// IA vía backend en Render + Sistema de voz
 // =========================================
 
 const API_URL = "https://tarot-backend-047w.onrender.com/api/interpretar";
@@ -10,10 +10,10 @@ let ultimaInterpretacion = "";
 
 
 // =========================================
-// LIMITAR EXTENSIÓN DE RESPUESTA
+// 1. LIMITAR EXTENSIÓN DE RESPUESTA
 // =========================================
 
-function limitarPalabras(texto, limite = 250) {
+function limitarPalabras(texto, limite = 320) {
 
     const palabras = texto.trim().split(/\s+/);
 
@@ -38,7 +38,7 @@ function limitarPalabras(texto, limite = 250) {
 
 
 // =========================================
-// FUNCIÓN PRINCIPAL DE IA
+// 2. FUNCIÓN PRINCIPAL DE IA
 // =========================================
 
 async function generarInterpretacionIA(cartas, pregunta) {
@@ -113,7 +113,7 @@ async function generarInterpretacionIA(cartas, pregunta) {
             return "No recibí una interpretación. Intenta nuevamente.";
         }
 
-        const interpretacionFinal = limitarPalabras(texto.trim(), 250);
+        const interpretacionFinal = limitarPalabras(texto.trim());
 
         // Guardar para sistema de voz
         ultimaInterpretacion = interpretacionFinal;
@@ -138,8 +138,10 @@ async function generarInterpretacionIA(cartas, pregunta) {
         return "No pude completar la consulta al oráculo. Intenta nuevamente.";
     }
 }
+
+
 // =========================================
-// 5. CREAR BOTÓN DE VOZ
+// 3. CREAR BOTÓN DE VOZ
 // =========================================
 
 function crearBotonVoz() {
@@ -304,7 +306,7 @@ function crearBotonVoz() {
 
 
 // =========================================
-// 6. FUNCIÓN DE LECTURA DE VOZ
+// 4. FUNCIÓN DE LECTURA DE VOZ
 // =========================================
 
 function leerInterpretacion(texto, callback) {
@@ -319,18 +321,12 @@ function leerInterpretacion(texto, callback) {
     }
 
     const textoLimpio = texto
-
         .replace(/[🔮✨🌙⭐💫🌟]/g, "")
-
         .replace(/\*\*/g, "")
-
         .replace(/\n\n+/g, ". ")
-
         .trim();
 
-    const utterance = new SpeechSynthesisUtterance(
-        textoLimpio
-    );
+    const utterance = new SpeechSynthesisUtterance(textoLimpio);
 
     const voices = window.speechSynthesis.getVoices();
 
@@ -354,31 +350,23 @@ function leerInterpretacion(texto, callback) {
     utterance.volume = 1;
     utterance.lang = "es-ES";
 
-    utterance.onstart = () => {
-        callback("reproduciendo");
-    };
+    utterance.onstart = () => callback("reproduciendo");
 
-    utterance.onend = () => {
-        callback("detenido");
-    };
+    utterance.onend = () => callback("detenido");
 
-    utterance.onerror = () => {
-        callback("detenido");
-    };
+    utterance.onerror = () => callback("detenido");
 
     window.speechSynthesis.speak(utterance);
 }
 
 
 // =========================================
-// 7. MOSTRAR / OCULTAR BOTÓN
+// 5. MOSTRAR / OCULTAR BOTÓN
 // =========================================
 
 function mostrarBotonVoz() {
 
-    const boton = document.getElementById(
-        "boton-voz-tarot"
-    );
+    const boton = document.getElementById("boton-voz-tarot");
 
     if (boton) {
 
@@ -391,9 +379,7 @@ function mostrarBotonVoz() {
 
 function ocultarBotonVoz() {
 
-    const boton = document.getElementById(
-        "boton-voz-tarot"
-    );
+    const boton = document.getElementById("boton-voz-tarot");
 
     if (boton) {
 
@@ -411,7 +397,7 @@ function ocultarBotonVoz() {
 
 
 // =========================================
-// 8. DETECTAR NUEVA LECTURA
+// 6. DETECTAR NUEVA LECTURA
 // =========================================
 
 document.addEventListener("click", (e) => {
@@ -428,7 +414,7 @@ document.addEventListener("click", (e) => {
 
 
 // =========================================
-// 9. FUNCIONES PÚBLICAS
+// 7. FUNCIONES PÚBLICAS
 // =========================================
 
 window.generarInterpretacionIA = generarInterpretacionIA;
@@ -441,21 +427,7 @@ window.ocultarBotonVozTarot = ocultarBotonVoz;
 
 
 // =========================================
-// 10. INICIALIZACIÓN DEL SISTEMA DE VOZ
+// 8. INICIALIZACIÓN
 // =========================================
 
-if ("speechSynthesis" in window) {
-
-    window.speechSynthesis.onvoiceschanged = () => {
-
-        console.log(
-            "Voces disponibles:",
-            window.speechSynthesis.getVoices().length
-        );
-    };
-}
-
-console.log("----------------------------------------");
-console.log("SISTEMA DE TAROT CON IA ACTIVADO");
-console.log("Sistema de voz integrado.");
-console.log("----------------------------------------");
+console.log("Sistema de tarot con IA activado.");
