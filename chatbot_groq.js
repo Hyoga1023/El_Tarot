@@ -1,96 +1,16 @@
 
 // =========================================
-// chatbot_groq.js - Versión optimizada
-// Groq + Tarot + Sistema de voz
+// chatbot_groq.js - IA vía backend en Render
 // =========================================
 
-const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODELO_IA = "openai/gpt-oss-20b";
+const API_URL = "https://tarot-backend-047w.onrender.com/api/interpretar";
 
 // Última interpretación para el sistema de voz
 let ultimaInterpretacion = "";
 
-// Respaldo temporal de API Key
-let apiKeyEnMemoria = null;
-
 
 // =========================================
-// 1. GESTIÓN DE API KEY
-// =========================================
-
-function ensureGroqKey() {
-
-    try {
-
-        let apiKey = localStorage.getItem("groq_api_key");
-
-        const esValida =
-            apiKey &&
-            apiKey.trim() !== "" &&
-            apiKey !== "null" &&
-            apiKey !== "undefined";
-
-        if (esValida) {
-
-            apiKeyEnMemoria = apiKey.trim();
-
-            return apiKeyEnMemoria;
-        }
-
-    } catch (error) {
-
-        console.warn("No se pudo acceder a localStorage:", error);
-    }
-
-    if (apiKeyEnMemoria) {
-        return apiKeyEnMemoria;
-    }
-
-    const nuevaKey = prompt(
-        "Introduce tu API Key de Groq:"
-    );
-
-    if (!nuevaKey || !nuevaKey.trim()) {
-
-        alert("Debes ingresar una API Key para utilizar el oráculo.");
-
-        return null;
-    }
-
-    const claveLimpia = nuevaKey.trim();
-
-    apiKeyEnMemoria = claveLimpia;
-
-    try {
-
-        localStorage.setItem(
-            "groq_api_key",
-            claveLimpia
-        );
-
-        const claveGuardada =
-            localStorage.getItem("groq_api_key");
-
-        if (claveGuardada === claveLimpia) {
-
-            console.log("API Key guardada correctamente.");
-
-        } else {
-
-            console.warn("Se utilizará la clave temporal.");
-        }
-
-    } catch (error) {
-
-        console.warn("No se pudo guardar la API Key:", error);
-    }
-
-    return claveLimpia;
-}
-
-
-// =========================================
-// 2. LIMITAR EXTENSIÓN DE RESPUESTA
+// LIMITAR EXTENSIÓN DE RESPUESTA
 // =========================================
 
 function limitarPalabras(texto, limite = 180) {
@@ -101,9 +21,7 @@ function limitarPalabras(texto, limite = 180) {
         return texto.trim();
     }
 
-    const recorte = palabras
-        .slice(0, limite)
-        .join(" ");
+    const recorte = palabras.slice(0, limite).join(" ");
 
     const ultimoPunto = Math.max(
         recorte.lastIndexOf("."),
@@ -120,207 +38,82 @@ function limitarPalabras(texto, limite = 180) {
 
 
 // =========================================
-// 3. FUNCIÓN PRINCIPAL DE IA
+// FUNCIÓN PRINCIPAL DE IA
 // =========================================
 
 async function generarInterpretacionIA(cartas, pregunta) {
 
     try {
 
-        const GROQ_API_KEY = ensureGroqKey();
-
-        if (!GROQ_API_KEY) {
-
-            return "No puedo consultar el oráculo sin una API Key de Groq.";
-        }
-
         if (!Array.isArray(cartas) || cartas.length !== 3) {
 
             throw new Error("La tirada debe contener exactamente tres cartas.");
         }
 
-        const nombresCartas = cartas.map((c) => {
+        // El servidor gratuito puede tardar en despertar
+        const controller = new AbortController();
 
-            const estado = c.invertida
-                ? "invertida"
-                : "derecha";
-
-            return `${c.carta} (${estado})`;
-
-        });
-
-        // =========================================
-        // PROMPT DE INTERPRETACIÓN
-        // =========================================
-
-        const prompt = `
-Pregunta del consultante: "${pregunta}"
-
-Cartas seleccionadas:
-
-1. ${nombresCartas[0]}: pasado o situación actual.
-2. ${nombresCartas[1]}: desafíos.
-3. ${nombresCartas[2]}: futuro o resultado.
-
-Interpreta las tres cartas como un único mensaje coherente
-que responda directamente a la pregunta.
-
-REGLAS OBLIGATORIAS:
-
-- Escribe entre 130 y 170 palabras.
-- Habla siempre en primera persona como tarotista.
-- Utiliza expresiones como "veo", "percibo", "interpreto" y "siento".
-- Dirígete directamente al consultante utilizando "tú".
-- Nunca hables del tarotista en tercera persona.
-- No describas al consultante como si fuera otra persona.
-- Explica el significado de cada carta y su relación con las demás.
-- Analiza cómo la situación actual influye en los desafíos y en el posible resultado.
-- Ofrece una reflexión significativa relacionada con la pregunta.
-- Utiliza un tono místico, cálido, profundo y natural.
-- Evita introducciones, saludos y conclusiones innecesarias.
-- No repitas ideas para completar la extensión.
-- Entrega únicamente la interpretación.
-`;
-
-        // =========================================
-        // CONFIGURACIÓN DE GROQ
-        // =========================================
-
-        const payload = {
-
-            model: MODELO_IA,
-
-            messages: [
-
-                {
-                    role: "system",
-
-                    content: `
-Eres un intérprete profesional de tarot.
-
-Tu comunicación es directa, personal y cercana.
-
-Hablas en primera persona singular.
-Tu voz utiliza expresiones como:
-"Veo en estas cartas..."
-"Percibo una energía..."
-"Interpreto esta combinación..."
-
-Te diriges directamente a quien consulta.
-
-Jamás hables de ti en tercera persona.
-
-Tus interpretaciones son profundas, claras y significativas.
-
-Escribe entre 130 y 170 palabras.
-Desarrolla el significado de las tres cartas.
-Conecta sus mensajes en una interpretación coherente.
-No repitas ideas ni utilices frases de relleno.
-
-Mantén siempre un tono místico, cálido y reflexivo.
-`
-                },
-
-                {
-                    role: "user",
-                    content: prompt
-                }
-
-            ],
-
-            max_completion_tokens: 500,
-
-            reasoning_effort: "low",
-
-            reasoning_format: "hidden",
-
-            temperature: 0.6
-        };
-
-        console.log("Consultando modelo:", MODELO_IA);
-
-        // =========================================
-        // SOLICITUD API
-        // =========================================
+        const temporizador = setTimeout(
+            () => controller.abort(),
+            90000
+        );
 
         const response = await fetch(API_URL, {
 
             method: "POST",
 
-            headers: {
+            headers: { "Content-Type": "application/json" },
 
-                "Content-Type": "application/json",
+            body: JSON.stringify({
 
-                Authorization: `Bearer ${GROQ_API_KEY}`
+                pregunta,
 
-            },
+                cartas: cartas.map((c) => ({
+                    carta: c.carta,
+                    invertida: Boolean(c.invertida)
+                }))
+            }),
 
-            body: JSON.stringify(payload)
-
+            signal: controller.signal
         });
 
-        // =========================================
-        // MANEJO DE ERRORES
-        // =========================================
+        clearTimeout(temporizador);
 
         if (!response.ok) {
 
-            let errorData = {};
+            let mensaje = "";
 
             try {
 
-                errorData = await response.json();
+                const errorData = await response.json();
+
+                mensaje = errorData.error || "";
 
             } catch (error) {
 
-                console.error("No se pudo leer el error de Groq.");
+                console.error("No se pudo leer el error del servidor.");
             }
 
-            const mensajeError =
-                errorData.error?.message || "Error desconocido.";
-
-            console.error(
-                `Error Groq API: ${response.status}`,
-                mensajeError
-            );
-
-            if (response.status === 401) {
-
-                limpiarApiKey();
-
-                return "Tu API Key no es válida. Recarga la página e introduce una nueva.";
-            }
-
-            if (response.status === 404) {
-
-                return "El modelo de IA no está disponible para tu cuenta de Groq.";
-            }
+            console.error(`Error del servidor: ${response.status}`, mensaje);
 
             if (response.status === 429) {
 
-                return "Has alcanzado el límite de consultas de Groq. Inténtalo más tarde.";
+                return "Has hecho demasiadas consultas seguidas. Espera un momento.";
             }
 
-            return `Error en el oráculo (${response.status}). ${mensajeError}`;
+            return mensaje || `Error en el oráculo (${response.status}).`;
         }
-
-        // =========================================
-        // PROCESAR RESPUESTA
-        // =========================================
 
         const data = await response.json();
 
-        const texto = data?.choices?.[0]?.message?.content;
+        const texto = data?.interpretacion;
 
         if (!texto || !texto.trim()) {
 
             return "No recibí una interpretación. Intenta nuevamente.";
         }
 
-        const interpretacionFinal = limitarPalabras(
-            texto.trim(),
-            180
-        );
+        const interpretacionFinal = limitarPalabras(texto.trim(), 180);
 
         // Guardar para sistema de voz
         ultimaInterpretacion = interpretacionFinal;
@@ -335,61 +128,16 @@ Mantén siempre un tono místico, cálido y reflexivo.
 
     } catch (error) {
 
-        console.error(
-            "Error en generarInterpretacionIA:",
-            error
-        );
+        console.error("Error en generarInterpretacionIA:", error);
+
+        if (error.name === "AbortError") {
+
+            return "El oráculo tardó demasiado en despertar. Intenta nuevamente.";
+        }
 
         return "No pude completar la consulta al oráculo. Intenta nuevamente.";
     }
 }
-
-
-// =========================================
-// 4. FUNCIONES AUXILIARES API KEY
-// =========================================
-
-function limpiarApiKey() {
-
-    try {
-
-        localStorage.removeItem("groq_api_key");
-
-    } catch (error) {
-
-        console.warn("No se pudo limpiar localStorage.");
-    }
-
-    apiKeyEnMemoria = null;
-
-    console.log("API Key eliminada.");
-}
-
-
-function verificarApiKey() {
-
-    let key = null;
-
-    try {
-
-        key = localStorage.getItem("groq_api_key");
-
-    } catch (error) {
-
-        console.warn("No se pudo acceder a localStorage.");
-    }
-
-    key = key || apiKeyEnMemoria;
-
-    console.log(
-        "API Key:",
-        key ? "***" + key.slice(-4) : "No encontrada"
-    );
-
-    return Boolean(key);
-}
-
-
 // =========================================
 // 5. CREAR BOTÓN DE VOZ
 // =========================================
@@ -691,10 +439,6 @@ window.mostrarBotonVozTarot = mostrarBotonVoz;
 
 window.ocultarBotonVozTarot = ocultarBotonVoz;
 
-window.limpiarApiKey = limpiarApiKey;
-
-window.verificarApiKey = verificarApiKey;
-
 
 // =========================================
 // 10. INICIALIZACIÓN DEL SISTEMA DE VOZ
@@ -713,6 +457,5 @@ if ("speechSynthesis" in window) {
 
 console.log("----------------------------------------");
 console.log("SISTEMA DE TAROT CON IA ACTIVADO");
-console.log("Modelo:", MODELO_IA);
 console.log("Sistema de voz integrado.");
 console.log("----------------------------------------");
